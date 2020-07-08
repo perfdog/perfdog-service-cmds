@@ -1,4 +1,6 @@
 # coding: utf-8
+
+import sys
 import threading
 
 import perfdog_pb2
@@ -57,7 +59,7 @@ class GetDeviceStatus(DeviceBase):
 class InitDevice(DeviceBase):
     def do_execute(self, device):
         res = get_stub().getDeviceStatus(device)
-        if res.isValid:
+        if res.isTesting:
             return True, DeviceContext(device)
 
         get_stub().initDevice(device)
@@ -187,6 +189,15 @@ class ShareCase(Command):
         expire_time = int(input('请输入失效时间: '))
         req = perfdog_pb2.ShareCaseReq(caseId=case_id, expireTime=expire_time)
         print(get_stub().shareCase(req))
+
+        return Quit()
+
+
+class KillServer(Command):
+    def execute(self):
+        req = perfdog_pb2.Empty()
+        print(get_stub().killServer(req))
+        sys.exit(0)
 
         return Quit()
 
@@ -519,4 +530,5 @@ def get_top_menus():
         CreateTask('创建任务'),
         ArchiveCaseToTask('归档Case到任务'),
         ShareCase('分享Case'),
+        KillServer('killServer'),
     ]
