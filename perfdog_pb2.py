@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='com.perfdog.proto',
   syntax='proto3',
   serialized_options=b'P\001',
-  serialized_pb=b'\n\rperfdog.proto\x12\x11\x63om.perfdog.proto\"\x07\n\x05\x45mpty\"\x16\n\x05Token\x12\r\n\x05token\x18\x01 \x01(\t\"@\n\x08UserInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03pic\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12\n\n\x02id\x18\x04 \x01(\t\"\x89\x01\n\x06\x44\x65vice\x12\x30\n\x06osType\x18\x01 \x01(\x0e\x32 .com.perfdog.proto.DEVICE_OSTYPE\x12\x32\n\x07\x63onType\x18\x02 \x01(\x0e\x32!.com.perfdog.proto.DEVICE_CONTYPE\x12\x0b\n\x03uid\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\"p\n\x0b\x44\x65viceEvent\x12\x36\n\teventType\x18\x01 \x01(\x0e\x32#.com.perfdog.proto.DEVICE_EVENTTYPE\x12)\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"s\n\nDeviceInfo\x12\x37\n\x05value\x18\x01 \x03(\x0b\x32(.com.perfdog.proto.DeviceInfo.ValueEntry\x1a,\n\nValueEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Q\n\x0c\x44\x65viceStatus\x12\x0f\n\x07isValid\x18\x01 \x01(\x08\x12\x11\n\tisTesting\x18\x02 \x01(\x08\x12\x1d\n\x15isPerfDogAppInstalled\x18\x03 \x01(\x08\"\x8a\x01\n\x07\x41ppInfo\x12\r\n\x05label\x18\x01 \x01(\t\x12\x13\n\x0bpackageName\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\t\x12\x13\n\x0bprocessList\x18\x04 \x03(\t\x12\x0c\n\x04icon\x18\x05 \x01(\x0c\x12\x13\n\x0bisSystemApp\x18\x06 \x01(\x08\x12\x12\n\nsubVersion\x18\x07 \x01(\t\"2\n\x07\x41ppList\x12\'\n\x03\x61pp\x18\x01 \x03(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"q\n\x15\x45nablePerfDataTypeReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12-\n\x04type\x18\x02 \x01(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"r\n\x16\x44isablePerfDataTypeReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12-\n\x04type\x18\x02 \x01(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"@\n\x0fPerfDataTypeRet\x12-\n\x04type\x18\x01 \x03(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"O\n\x12ScreenShotInterval\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0e\n\x06second\x18\x02 \x01(\x05\"\xa8\x01\n\x0fStartTestAppReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\x12\x12\n\nsubProcess\x18\x03 \x01(\t\x12\x1a\n\x12hideFloatingWindow\x18\x04 \x01(\x08\x12\x11\n\tsubWindow\x18\x05 \x01(\t\"\x9a\x01\n\x16StartTestSysProcessReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x39\n\x0esysProcessInfo\x18\x02 \x01(\x0b\x32!.com.perfdog.proto.SysProcessInfo\x12\x1a\n\x12hideFloatingWindow\x18\x03 \x01(\x08\"\x1b\n\x0cStartTestRet\x12\x0b\n\x03ret\x18\x01 \x01(\x05\"B\n\x15OpenPerfDataStreamReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"8\n\x0bStopTestReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"=\n\tFrameTime\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tframeTime\x18\x03 \x01(\x01\"R\n\x07\x46psData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03\x66ps\x18\x03 \x01(\x01\x12\r\n\x05label\x18\x04 \x01(\t\x12\x0c\n\x04note\x18\x05 \x01(\t\"@\n\rFrameTimeData\x12/\n\tframeTime\x18\x01 \x03(\x0b\x32\x1c.com.perfdog.proto.FrameTime\"Y\n\x08JankData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04jank\x18\x03 \x01(\x05\x12\x0f\n\x07\x62igJank\x18\x04 \x01(\x05\x12\x0f\n\x07stutter\x18\x05 \x01(\x01\"F\n\x13\x41ndroidGpuUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x10\n\x08gpuUsage\x18\x03 \x01(\x01\"n\n\x0fIosGpuUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x13\n\x0brenderUsage\x18\x03 \x01(\x02\x12\x12\n\ntilerUsage\x18\x04 \x01(\x02\x12\x13\n\x0b\x64\x65viceUsage\x18\x05 \x01(\x02\"=\n\x0bGpuFreqData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07gpuFreq\x18\x03 \x01(\x05\"a\n\x0e\x41ndroidMemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03pss\x18\x03 \x01(\x05\x12\x0c\n\x04swap\x18\x04 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x05 \x01(\x05\"r\n\x14\x41ndroidMemDetailData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tnativePss\x18\x03 \x01(\x05\x12\x0b\n\x03gfx\x18\x04 \x01(\x05\x12\n\n\x02gl\x18\x05 \x01(\x05\x12\x0f\n\x07unknown\x18\x06 \x01(\x05\"X\n\x0cIos10MemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x12\n\nrealMemory\x18\x03 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x04 \x01(\x05\"}\n\x0cIos11MemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x13\n\x0bxcodeMemory\x18\x03 \x01(\x05\x12\x12\n\nrealMemory\x18\x04 \x01(\x05\x12\x0e\n\x06memory\x18\x05 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x06 \x01(\x05\"A\n\rCoreUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tcoreUsage\x18\x03 \x03(\x02\"=\n\x0b\x43puFreqData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x63puFreq\x18\x03 \x03(\x05\"S\n\x0c\x43puUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x10\n\x08\x61ppUsage\x18\x03 \x01(\x01\x12\x12\n\ntotalUsage\x18\x04 \x01(\x01\":\n\x0b\x43puTempData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04temp\x18\x03 \x01(\x05\">\n\x0f\x42\x61tteryTempData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04temp\x18\x03 \x01(\x05\"A\n\rCtxSwitchData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tctxSwitch\x18\x03 \x01(\x03\"=\n\x0bWakeupsData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07wakeups\x18\x03 \x01(\x03\"]\n\x0b\x42\x61tteryData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x63urrent\x18\x03 \x01(\x05\x12\x0f\n\x07voltage\x18\x04 \x01(\x05\x12\r\n\x05power\x18\x05 \x01(\x05\"N\n\x0bNetworkData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0e\n\x06upload\x18\x03 \x01(\x05\x12\x10\n\x08\x64ownload\x18\x04 \x01(\x05\"\x19\n\nSyslogData\x12\x0b\n\x03log\x18\x01 \x01(\t\"=\n\x0eScreenShotData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"\x1a\n\x0bWarningData\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x18\n\tErrorData\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x86\x08\n\x0f\x41ndroidPerfData\x12-\n\x07\x66psData\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.FpsDataH\x00\x12\x39\n\rframeTimeData\x18\x02 \x01(\x0b\x32 .com.perfdog.proto.FrameTimeDataH\x00\x12/\n\x08jankData\x18\x03 \x01(\x0b\x32\x1b.com.perfdog.proto.JankDataH\x00\x12\x45\n\x13\x61ndroidGpuUsageData\x18\x04 \x01(\x0b\x32&.com.perfdog.proto.AndroidGpuUsageDataH\x00\x12\x35\n\x0bgpuFreqData\x18\x05 \x01(\x0b\x32\x1e.com.perfdog.proto.GpuFreqDataH\x00\x12;\n\x0e\x61ndroidMemData\x18\x06 \x01(\x0b\x32!.com.perfdog.proto.AndroidMemDataH\x00\x12G\n\x14\x61ndroidMemDetailData\x18\x07 \x01(\x0b\x32\'.com.perfdog.proto.AndroidMemDetailDataH\x00\x12\x39\n\rcoreUsageData\x18\x08 \x01(\x0b\x32 .com.perfdog.proto.CoreUsageDataH\x00\x12\x35\n\x0b\x63puFreqData\x18\t \x01(\x0b\x32\x1e.com.perfdog.proto.CpuFreqDataH\x00\x12\x37\n\x0c\x63puUsageData\x18\n \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x35\n\x0b\x63puTempData\x18\x0b \x01(\x0b\x32\x1e.com.perfdog.proto.CpuTempDataH\x00\x12\x35\n\x0b\x62\x61tteryData\x18\x0c \x01(\x0b\x32\x1e.com.perfdog.proto.BatteryDataH\x00\x12\x35\n\x0bnetworkData\x18\r \x01(\x0b\x32\x1e.com.perfdog.proto.NetworkDataH\x00\x12\x33\n\nsyslogData\x18\x0e \x01(\x0b\x32\x1d.com.perfdog.proto.SyslogDataH\x00\x12;\n\x0escreenShotData\x18\x0f \x01(\x0b\x32!.com.perfdog.proto.ScreenShotDataH\x00\x12\x41\n\x16normalizedCpuUsageData\x18\x10 \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x46\n\x1anormalizedCpuCoreUsageData\x18\x11 \x01(\x0b\x32 .com.perfdog.proto.CoreUsageDataH\x00\x42\x07\n\x05value\"\xf1\x06\n\x0bIosPerfData\x12-\n\x07\x66psData\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.FpsDataH\x00\x12\x39\n\rframeTimeData\x18\x02 \x01(\x0b\x32 .com.perfdog.proto.FrameTimeDataH\x00\x12/\n\x08jankData\x18\x03 \x01(\x0b\x32\x1b.com.perfdog.proto.JankDataH\x00\x12=\n\x0fiosGpuUsageData\x18\x04 \x01(\x0b\x32\".com.perfdog.proto.IosGpuUsageDataH\x00\x12\x37\n\x0cios10MemData\x18\x05 \x01(\x0b\x32\x1f.com.perfdog.proto.Ios10MemDataH\x00\x12\x37\n\x0cios11MemData\x18\x06 \x01(\x0b\x32\x1f.com.perfdog.proto.Ios11MemDataH\x00\x12\x37\n\x0c\x63puUsageData\x18\x07 \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x39\n\rctxSwitchData\x18\x08 \x01(\x0b\x32 .com.perfdog.proto.CtxSwitchDataH\x00\x12\x35\n\x0bwakeupsData\x18\t \x01(\x0b\x32\x1e.com.perfdog.proto.WakeupsDataH\x00\x12\x35\n\x0b\x62\x61tteryData\x18\n \x01(\x0b\x32\x1e.com.perfdog.proto.BatteryDataH\x00\x12\x35\n\x0bnetworkData\x18\x0b \x01(\x0b\x32\x1e.com.perfdog.proto.NetworkDataH\x00\x12\x33\n\nsyslogData\x18\x0c \x01(\x0b\x32\x1d.com.perfdog.proto.SyslogDataH\x00\x12;\n\x0escreenShotData\x18\r \x01(\x0b\x32!.com.perfdog.proto.ScreenShotDataH\x00\x12\x43\n\x12iosEnergyUsageData\x18\x0e \x01(\x0b\x32%.com.perfdog.proto.IosEnergyUsageDataH\x00\x12=\n\x0f\x62\x61tteryTempData\x18\x0f \x01(\x0b\x32\".com.perfdog.proto.BatteryTempDataH\x00\x42\x07\n\x05value\"\xac\x02\n\x08PerfData\x12\x35\n\x0bwarningData\x18\x01 \x01(\x0b\x32\x1e.com.perfdog.proto.WarningDataH\x00\x12\x31\n\terrorData\x18\x02 \x01(\x0b\x32\x1c.com.perfdog.proto.ErrorDataH\x00\x12=\n\x0f\x61ndroidPerfData\x18\x03 \x01(\x0b\x32\".com.perfdog.proto.AndroidPerfDataH\x00\x12\x35\n\x0biosPerfData\x18\x04 \x01(\x0b\x32\x1e.com.perfdog.proto.IosPerfDataH\x00\x12\x37\n\x0cstartTestRet\x18\x05 \x01(\x0b\x32\x1f.com.perfdog.proto.StartTestRetH\x00\x42\x07\n\x05value\"\xf2\x01\n\rCachePerfData\x12-\n\x07\x61ppInfo\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfoH\x00\x12=\n\x0f\x41ndroidPerfData\x18\x02 \x01(\x0b\x32\".com.perfdog.proto.AndroidPerfDataH\x00\x12\x35\n\x0bIosPerfData\x18\x03 \x01(\x0b\x32\x1e.com.perfdog.proto.IosPerfDataH\x00\x12\x33\n\nDeviceInfo\x18\x04 \x01(\x0b\x32\x1d.com.perfdog.proto.DeviceInfoH\x00\x42\x07\n\x05value\"7\n\x0eScreenshotFile\x12\x10\n\x08\x66ileName\x18\x01 \x01(\t\x12\x13\n\x0b\x66ileContent\x18\x02 \x01(\x0c\"\x7f\n\x13\x43\x61\x63hePerfDataPacked\x12\x12\n\x08perfData\x18\x01 \x01(\x0cH\x00\x12\x0e\n\x04icon\x18\x02 \x01(\x0cH\x00\x12;\n\x0escreenshotFile\x18\x03 \x01(\x0b\x32!.com.perfdog.proto.ScreenshotFileH\x00\x42\x07\n\x05value\"G\n\x0bSetLabelReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\r\n\x05label\x18\x02 \x01(\t\"\x1b\n\x0bSetLabelRet\x12\x0c\n\x04time\x18\x01 \x01(\x03\"X\n\x0eUpdateLabelReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\x12\r\n\x05label\x18\x03 \x01(\t\"S\n\nAddNoteReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\x12\x0c\n\x04note\x18\x03 \x01(\t\"H\n\rRemoveNoteReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\"o\n\x16SetDataUploadServerReq\x12\x11\n\tserverUrl\x18\x01 \x01(\t\x12\x42\n\x10\x64\x61taUploadFormat\x18\x02 \x01(\x0e\x32(.com.perfdog.proto.DataInterchangeFormat\"\x18\n\x16SetDataUploadServerRsp\"\xf4\x01\n\x0bSaveDataReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x11\n\tbeginTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x10\n\x08\x63\x61seName\x18\x04 \x01(\t\x12\x16\n\x0euploadToServer\x18\x05 \x01(\x08\x12\x14\n\x0c\x65xportToFile\x18\x06 \x01(\x08\x12\x17\n\x0foutputDirectory\x18\x07 \x01(\t\x12=\n\x10\x64\x61taExportFormat\x18\x08 \x01(\x0e\x32#.com.perfdog.proto.DataExportFormat\"7\n\x14UploadToServerResult\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0e\n\x06\x63\x61seId\x18\x02 \x01(\t\"7\n\x12\x45xportToFileResult\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08\x66ilePath\x18\x02 \x01(\t\"\x89\x01\n\x0bSaveDataRsp\x12=\n\x0cuploadResult\x18\x01 \x01(\x0b\x32\'.com.perfdog.proto.UploadToServerResult\x12;\n\x0c\x65xportResult\x18\x02 \x01(\x0b\x32%.com.perfdog.proto.ExportToFileResult\"m\n\x17GetAppRunningProcessReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"i\n\x13GetAppWindowsMapReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"7\n\x0bProcessInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05isTop\x18\x02 \x01(\x08\x12\x0b\n\x03pid\x18\x03 \x01(\x05\"N\n\x17GetAppRunningProcessRet\x12\x33\n\x0bprocessInfo\x18\x01 \x03(\x0b\x32\x1e.com.perfdog.proto.ProcessInfo\"\x19\n\tAppWindow\x12\x0c\n\x04name\x18\x01 \x03(\t\"\xbb\x01\n\x13GetAppWindowsMapRet\x12P\n\rpid2WindowMap\x18\x01 \x03(\x0b\x32\x39.com.perfdog.proto.GetAppWindowsMapRet.Pid2WindowMapEntry\x1aR\n\x12Pid2WindowMapEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.com.perfdog.proto.AppWindow:\x02\x38\x01\"+\n\x0eSysProcessInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\x05\"Q\n\x17GetRunningSysProcessRet\x12\x36\n\x0bprocessInfo\x18\x01 \x03(\x0b\x32!.com.perfdog.proto.SysProcessInfo\"\x93\x01\n\x12IosEnergyUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03\x63pu\x18\x03 \x01(\x05\x12\x0b\n\x03gpu\x18\x04 \x01(\x05\x12\x0f\n\x07network\x18\x05 \x01(\x05\x12\x10\n\x08location\x18\x06 \x01(\x05\x12\x0f\n\x07\x64isplay\x18\x07 \x01(\x05\x12\x10\n\x08overhead\x18\x08 \x01(\x05\"f\n\x10UpdateAppInfoReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\";\n\x10UpdateAppInfoRet\x12\'\n\x03\x61pp\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"B\n\x15GetDeviceCacheDataReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"\x86\x01\n\x1bGetDeviceCacheDataPackedReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12<\n\ndataFormat\x18\x02 \x01(\x0e\x32(.com.perfdog.proto.DataInterchangeFormat\"!\n\rCreateTaskReq\x12\x10\n\x08taskName\x18\x01 \x01(\t\"\x1f\n\rCreateTaskRsp\x12\x0e\n\x06taskId\x18\x01 \x01(\t\"6\n\x14\x41rchiveCaseToTaskReq\x12\x0e\n\x06\x63\x61seId\x18\x01 \x01(\t\x12\x0e\n\x06taskId\x18\x02 \x01(\t\"\x16\n\x14\x41rchiveCaseToTaskRsp\"2\n\x0cShareCaseReq\x12\x0e\n\x06\x63\x61seId\x18\x01 \x01(\t\x12\x12\n\nexpireTime\x18\x02 \x01(\x05\"1\n\x0cShareCaseRsp\x12\x0f\n\x07\x63\x61seUrl\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t*\'\n\x10\x44\x45VICE_EVENTTYPE\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\n\n\x06REMOVE\x10\x01*%\n\rDEVICE_OSTYPE\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01*#\n\x0e\x44\x45VICE_CONTYPE\x12\x07\n\x03USB\x10\x00\x12\x08\n\x04WIFI\x10\x01*\x9c\x03\n\x0cPerfDataType\x12\x0f\n\x0b\x44\x41TAID_NONE\x10\x00\x12\r\n\tCPU_USAGE\x10\x01\x12\r\n\tGPU_USAGE\x10\x02\x12\x0c\n\x08GPU_FREQ\x10\x03\x12\x07\n\x03\x46PS\x10\x04\x12\x11\n\rNETWORK_USAGE\x10\x05\x12\x19\n\x15\x41NDROID_MEMORY_DETAIL\x10\x06\x12\n\n\x06MEMORY\x10\x07\x12\x0b\n\x07\x42\x41TTERY\x10\x08\x12\x13\n\x0f\x43PU_TEMPERATURE\x10\t\x12\x0e\n\nFRAME_TIME\x10\n\x12\x0e\n\nCTX_SWITCH\x10\x0b\x12\n\n\x06WAKEUP\x10\x0c\x12\x0f\n\x0bSCREEN_SHOT\x10\r\x12\x0e\n\nSYSTEM_LOG\x10\x0e\x12\x12\n\x0e\x43ORE_FREQUENCY\x10\x0f\x12\x0e\n\nCORE_USAGE\x10\x10\x12\x11\n\rIOS_GPU_USAGE\x10\x11\x12\x14\n\x10IOS_ENERGY_USAGE\x10\x12\x12\x17\n\x13\x42\x41TTERY_TEMPERATURE\x10\x13\x12\x18\n\x14NORMALIZED_CPU_USAGE\x10\x14\x12\x1d\n\x19NORMALIZED_CPU_CORE_USAGE\x10\x15*S\n\x10\x44\x61taExportFormat\x12\x13\n\x0f\x45XPORT_TO_EXCEL\x10\x00\x12\x12\n\x0e\x45XPORT_TO_JSON\x10\x01\x12\x16\n\x12\x45XPORT_TO_PROTOBUF\x10\x02*/\n\x15\x44\x61taInterchangeFormat\x12\x08\n\x04JSON\x10\x00\x12\x0c\n\x08PROTOBUF\x10\x01\x32\x80\x17\n\x0ePerfDogService\x12I\n\x0eloginWithToken\x12\x18.com.perfdog.proto.Token\x1a\x1b.com.perfdog.proto.UserInfo\"\x00\x12R\n\x12startDeviceMonitor\x12\x18.com.perfdog.proto.Empty\x1a\x1e.com.perfdog.proto.DeviceEvent\"\x00\x30\x01\x12\x43\n\ninitDevice\x12\x19.com.perfdog.proto.Device\x1a\x18.com.perfdog.proto.Empty\"\x00\x12K\n\rgetDeviceInfo\x12\x19.com.perfdog.proto.Device\x1a\x1d.com.perfdog.proto.DeviceInfo\"\x00\x12O\n\x0fgetDeviceStatus\x12\x19.com.perfdog.proto.Device\x1a\x1f.com.perfdog.proto.DeviceStatus\"\x00\x12\x45\n\ngetAppList\x12\x19.com.perfdog.proto.Device\x1a\x1a.com.perfdog.proto.AppList\"\x00\x12Z\n\x12\x65nablePerfDataType\x12(.com.perfdog.proto.EnablePerfDataTypeReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12\\\n\x13\x64isablePerfDataType\x12).com.perfdog.proto.DisablePerfDataTypeReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12R\n\x0fgetPerfDataType\x12\x19.com.perfdog.proto.Device\x1a\".com.perfdog.proto.PerfDataTypeRet\"\x00\x12W\n\x14getAvailableDataType\x12\x19.com.perfdog.proto.Device\x1a\".com.perfdog.proto.PerfDataTypeRet\"\x00\x12Z\n\x15setScreenShotInterval\x12%.com.perfdog.proto.ScreenShotInterval\x1a\x18.com.perfdog.proto.Empty\"\x00\x12[\n\x14StartTestAppInternal\x12\".com.perfdog.proto.StartTestAppReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12i\n\x1bStartTestSysProcessInternal\x12).com.perfdog.proto.StartTestSysProcessReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12U\n\x0cstartTestApp\x12\".com.perfdog.proto.StartTestAppReq\x1a\x1f.com.perfdog.proto.StartTestRet\"\x00\x12\x63\n\x13startTestSysProcess\x12).com.perfdog.proto.StartTestSysProcessReq\x1a\x1f.com.perfdog.proto.StartTestRet\"\x00\x12_\n\x12openPerfDataStream\x12(.com.perfdog.proto.OpenPerfDataStreamReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12\x46\n\x08stopTest\x12\x1e.com.perfdog.proto.StopTestReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12L\n\x08setLabel\x12\x1e.com.perfdog.proto.SetLabelReq\x1a\x1e.com.perfdog.proto.SetLabelRet\"\x00\x12L\n\x0bupdateLabel\x12!.com.perfdog.proto.UpdateLabelReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12\x44\n\x07\x61\x64\x64Note\x12\x1d.com.perfdog.proto.AddNoteReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12J\n\nremoveNote\x12 .com.perfdog.proto.RemoveNoteReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12s\n\x19setGlobalDataUploadServer\x12).com.perfdog.proto.SetDataUploadServerReq\x1a).com.perfdog.proto.SetDataUploadServerRsp\"\x00\x12L\n\x08saveData\x12\x1e.com.perfdog.proto.SaveDataReq\x1a\x1e.com.perfdog.proto.SaveDataRsp\"\x00\x12\x64\n\x12getDeviceCacheData\x12(.com.perfdog.proto.GetDeviceCacheDataReq\x1a .com.perfdog.proto.CachePerfData\"\x00\x30\x01\x12v\n\x18getDeviceCacheDataPacked\x12..com.perfdog.proto.GetDeviceCacheDataPackedReq\x1a&.com.perfdog.proto.CachePerfDataPacked\"\x00\x30\x01\x12p\n\x14getAppRunningProcess\x12*.com.perfdog.proto.GetAppRunningProcessReq\x1a*.com.perfdog.proto.GetAppRunningProcessRet\"\x00\x12\x64\n\x10getAppWindowsMap\x12&.com.perfdog.proto.GetAppWindowsMapReq\x1a&.com.perfdog.proto.GetAppWindowsMapRet\"\x00\x12_\n\x14getRunningSysProcess\x12\x19.com.perfdog.proto.Device\x1a*.com.perfdog.proto.GetRunningSysProcessRet\"\x00\x12[\n\rupdateAppInfo\x12#.com.perfdog.proto.UpdateAppInfoReq\x1a#.com.perfdog.proto.UpdateAppInfoRet\"\x00\x12R\n\ncreateTask\x12 .com.perfdog.proto.CreateTaskReq\x1a .com.perfdog.proto.CreateTaskRsp\"\x00\x12g\n\x11\x61rchiveCaseToTask\x12\'.com.perfdog.proto.ArchiveCaseToTaskReq\x1a\'.com.perfdog.proto.ArchiveCaseToTaskRsp\"\x00\x12O\n\tshareCase\x12\x1f.com.perfdog.proto.ShareCaseReq\x1a\x1f.com.perfdog.proto.ShareCaseRsp\"\x00\x12\x42\n\nkillServer\x12\x18.com.perfdog.proto.Empty\x1a\x18.com.perfdog.proto.Empty\"\x00\x42\x02P\x01\x62\x06proto3'
+  serialized_pb=b'\n\rperfdog.proto\x12\x11\x63om.perfdog.proto\"\x1c\n\x0bOptionalInt\x12\r\n\x05value\x18\x01 \x01(\x05\"\x1e\n\rOptionalFloat\x12\r\n\x05value\x18\x01 \x01(\x02\"\x07\n\x05\x45mpty\"\x16\n\x05Token\x12\r\n\x05token\x18\x01 \x01(\t\"@\n\x08UserInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03pic\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12\n\n\x02id\x18\x04 \x01(\t\"\x89\x01\n\x06\x44\x65vice\x12\x30\n\x06osType\x18\x01 \x01(\x0e\x32 .com.perfdog.proto.DEVICE_OSTYPE\x12\x32\n\x07\x63onType\x18\x02 \x01(\x0e\x32!.com.perfdog.proto.DEVICE_CONTYPE\x12\x0b\n\x03uid\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\"p\n\x0b\x44\x65viceEvent\x12\x36\n\teventType\x18\x01 \x01(\x0e\x32#.com.perfdog.proto.DEVICE_EVENTTYPE\x12)\n\x06\x64\x65vice\x18\x02 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"s\n\nDeviceInfo\x12\x37\n\x05value\x18\x01 \x03(\x0b\x32(.com.perfdog.proto.DeviceInfo.ValueEntry\x1a,\n\nValueEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Q\n\x0c\x44\x65viceStatus\x12\x0f\n\x07isValid\x18\x01 \x01(\x08\x12\x11\n\tisTesting\x18\x02 \x01(\x08\x12\x1d\n\x15isPerfDogAppInstalled\x18\x03 \x01(\x08\"\x8a\x01\n\x07\x41ppInfo\x12\r\n\x05label\x18\x01 \x01(\t\x12\x13\n\x0bpackageName\x18\x02 \x01(\t\x12\x0f\n\x07version\x18\x03 \x01(\t\x12\x13\n\x0bprocessList\x18\x04 \x03(\t\x12\x0c\n\x04icon\x18\x05 \x01(\x0c\x12\x13\n\x0bisSystemApp\x18\x06 \x01(\x08\x12\x12\n\nsubVersion\x18\x07 \x01(\t\"2\n\x07\x41ppList\x12\'\n\x03\x61pp\x18\x01 \x03(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"q\n\x15\x45nablePerfDataTypeReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12-\n\x04type\x18\x02 \x01(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"r\n\x16\x44isablePerfDataTypeReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12-\n\x04type\x18\x02 \x01(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"@\n\x0fPerfDataTypeRet\x12-\n\x04type\x18\x01 \x03(\x0e\x32\x1f.com.perfdog.proto.PerfDataType\"O\n\x12ScreenShotInterval\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0e\n\x06second\x18\x02 \x01(\x05\"\xa8\x01\n\x0fStartTestAppReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\x12\x12\n\nsubProcess\x18\x03 \x01(\t\x12\x1a\n\x12hideFloatingWindow\x18\x04 \x01(\x08\x12\x11\n\tsubWindow\x18\x05 \x01(\t\"\x9a\x01\n\x16StartTestSysProcessReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x39\n\x0esysProcessInfo\x18\x02 \x01(\x0b\x32!.com.perfdog.proto.SysProcessInfo\x12\x1a\n\x12hideFloatingWindow\x18\x03 \x01(\x08\"\x1b\n\x0cStartTestRet\x12\x0b\n\x03ret\x18\x01 \x01(\x05\"B\n\x15OpenPerfDataStreamReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"8\n\x0bStopTestReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"=\n\tFrameTime\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tframeTime\x18\x03 \x01(\x01\"R\n\x07\x46psData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03\x66ps\x18\x03 \x01(\x01\x12\r\n\x05label\x18\x04 \x01(\t\x12\x0c\n\x04note\x18\x05 \x01(\t\"@\n\rFrameTimeData\x12/\n\tframeTime\x18\x01 \x03(\x0b\x32\x1c.com.perfdog.proto.FrameTime\"Y\n\x08JankData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04jank\x18\x03 \x01(\x05\x12\x0f\n\x07\x62igJank\x18\x04 \x01(\x05\x12\x0f\n\x07stutter\x18\x05 \x01(\x01\"F\n\x13\x41ndroidGpuUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x10\n\x08gpuUsage\x18\x03 \x01(\x01\"n\n\x0fIosGpuUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x13\n\x0brenderUsage\x18\x03 \x01(\x02\x12\x12\n\ntilerUsage\x18\x04 \x01(\x02\x12\x13\n\x0b\x64\x65viceUsage\x18\x05 \x01(\x02\"=\n\x0bGpuFreqData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07gpuFreq\x18\x03 \x01(\x05\"z\n\x0e\x41ndroidMemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03pss\x18\x03 \x01(\x05\x12\x0c\n\x04swap\x18\x04 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x05 \x01(\x05\x12\x17\n\x0f\x61vailableMemory\x18\x06 \x01(\x05\"r\n\x14\x41ndroidMemDetailData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tnativePss\x18\x03 \x01(\x05\x12\x0b\n\x03gfx\x18\x04 \x01(\x05\x12\n\n\x02gl\x18\x05 \x01(\x05\x12\x0f\n\x07unknown\x18\x06 \x01(\x05\"q\n\x0cIos10MemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x12\n\nrealMemory\x18\x03 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x04 \x01(\x05\x12\x17\n\x0f\x61vailableMemory\x18\x05 \x01(\x05\"\x96\x01\n\x0cIos11MemData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x13\n\x0bxcodeMemory\x18\x03 \x01(\x05\x12\x12\n\nrealMemory\x18\x04 \x01(\x05\x12\x0e\n\x06memory\x18\x05 \x01(\x05\x12\x15\n\rvirtualMemory\x18\x06 \x01(\x05\x12\x17\n\x0f\x61vailableMemory\x18\x07 \x01(\x05\"A\n\rCoreUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tcoreUsage\x18\x03 \x03(\x02\"=\n\x0b\x43puFreqData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x63puFreq\x18\x03 \x03(\x05\"S\n\x0c\x43puUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x10\n\x08\x61ppUsage\x18\x03 \x01(\x01\x12\x12\n\ntotalUsage\x18\x04 \x01(\x01\":\n\x0b\x43puTempData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04temp\x18\x03 \x01(\x05\">\n\x0f\x42\x61tteryTempData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04temp\x18\x03 \x01(\x05\"A\n\rCtxSwitchData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x11\n\tctxSwitch\x18\x03 \x01(\x03\"=\n\x0bWakeupsData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07wakeups\x18\x03 \x01(\x03\"]\n\x0b\x42\x61tteryData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x63urrent\x18\x03 \x01(\x05\x12\x0f\n\x07voltage\x18\x04 \x01(\x05\x12\r\n\x05power\x18\x05 \x01(\x05\"N\n\x0bNetworkData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0e\n\x06upload\x18\x03 \x01(\x05\x12\x10\n\x08\x64ownload\x18\x04 \x01(\x05\"\x19\n\nSyslogData\x12\x0b\n\x03log\x18\x01 \x01(\t\"=\n\x0eScreenShotData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\x0c\"\x1a\n\x0bWarningData\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x18\n\tErrorData\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\xb7\x01\n\x15GpuCounterUtilization\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12@\n\x16nonFragmentUtilization\x18\x03 \x01(\x0b\x32 .com.perfdog.proto.OptionalFloat\x12=\n\x13\x66ragmentUtilization\x18\x04 \x01(\x0b\x32 .com.perfdog.proto.OptionalFloat\"\xa4\x01\n\x14GpuCounterPixelsInfo\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x32\n\x08overDraw\x18\x03 \x01(\x0b\x32 .com.perfdog.proto.OptionalFloat\x12\x39\n\x0fpixelThroughput\x18\x04 \x01(\x0b\x32 .com.perfdog.proto.OptionalFloat\"\x8a\x02\n\x16GpuCounterMemoryAccess\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x37\n\x0fl2LoadStoreRead\x18\x03 \x01(\x0b\x32\x1e.com.perfdog.proto.OptionalInt\x12\x35\n\rl2TextureRead\x18\x04 \x01(\x0b\x32\x1e.com.perfdog.proto.OptionalInt\x12/\n\x07\x62usRead\x18\x05 \x01(\x0b\x32\x1e.com.perfdog.proto.OptionalInt\x12\x30\n\x08\x62usWrite\x18\x06 \x01(\x0b\x32\x1e.com.perfdog.proto.OptionalInt\"\xe7\t\n\x0f\x41ndroidPerfData\x12-\n\x07\x66psData\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.FpsDataH\x00\x12\x39\n\rframeTimeData\x18\x02 \x01(\x0b\x32 .com.perfdog.proto.FrameTimeDataH\x00\x12/\n\x08jankData\x18\x03 \x01(\x0b\x32\x1b.com.perfdog.proto.JankDataH\x00\x12\x45\n\x13\x61ndroidGpuUsageData\x18\x04 \x01(\x0b\x32&.com.perfdog.proto.AndroidGpuUsageDataH\x00\x12\x35\n\x0bgpuFreqData\x18\x05 \x01(\x0b\x32\x1e.com.perfdog.proto.GpuFreqDataH\x00\x12;\n\x0e\x61ndroidMemData\x18\x06 \x01(\x0b\x32!.com.perfdog.proto.AndroidMemDataH\x00\x12G\n\x14\x61ndroidMemDetailData\x18\x07 \x01(\x0b\x32\'.com.perfdog.proto.AndroidMemDetailDataH\x00\x12\x39\n\rcoreUsageData\x18\x08 \x01(\x0b\x32 .com.perfdog.proto.CoreUsageDataH\x00\x12\x35\n\x0b\x63puFreqData\x18\t \x01(\x0b\x32\x1e.com.perfdog.proto.CpuFreqDataH\x00\x12\x37\n\x0c\x63puUsageData\x18\n \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x35\n\x0b\x63puTempData\x18\x0b \x01(\x0b\x32\x1e.com.perfdog.proto.CpuTempDataH\x00\x12\x35\n\x0b\x62\x61tteryData\x18\x0c \x01(\x0b\x32\x1e.com.perfdog.proto.BatteryDataH\x00\x12\x35\n\x0bnetworkData\x18\r \x01(\x0b\x32\x1e.com.perfdog.proto.NetworkDataH\x00\x12\x33\n\nsyslogData\x18\x0e \x01(\x0b\x32\x1d.com.perfdog.proto.SyslogDataH\x00\x12;\n\x0escreenShotData\x18\x0f \x01(\x0b\x32!.com.perfdog.proto.ScreenShotDataH\x00\x12\x41\n\x16normalizedCpuUsageData\x18\x10 \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x46\n\x1anormalizedCpuCoreUsageData\x18\x11 \x01(\x0b\x32 .com.perfdog.proto.CoreUsageDataH\x00\x12I\n\x15gpuCounterUtilization\x18\x12 \x01(\x0b\x32(.com.perfdog.proto.GpuCounterUtilizationH\x00\x12G\n\x14gpuCounterPixelsInfo\x18\x13 \x01(\x0b\x32\'.com.perfdog.proto.GpuCounterPixelsInfoH\x00\x12K\n\x16gpuCounterMemoryAccess\x18\x14 \x01(\x0b\x32).com.perfdog.proto.GpuCounterMemoryAccessH\x00\x42\x07\n\x05value\"\xf1\x06\n\x0bIosPerfData\x12-\n\x07\x66psData\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.FpsDataH\x00\x12\x39\n\rframeTimeData\x18\x02 \x01(\x0b\x32 .com.perfdog.proto.FrameTimeDataH\x00\x12/\n\x08jankData\x18\x03 \x01(\x0b\x32\x1b.com.perfdog.proto.JankDataH\x00\x12=\n\x0fiosGpuUsageData\x18\x04 \x01(\x0b\x32\".com.perfdog.proto.IosGpuUsageDataH\x00\x12\x37\n\x0cios10MemData\x18\x05 \x01(\x0b\x32\x1f.com.perfdog.proto.Ios10MemDataH\x00\x12\x37\n\x0cios11MemData\x18\x06 \x01(\x0b\x32\x1f.com.perfdog.proto.Ios11MemDataH\x00\x12\x37\n\x0c\x63puUsageData\x18\x07 \x01(\x0b\x32\x1f.com.perfdog.proto.CpuUsageDataH\x00\x12\x39\n\rctxSwitchData\x18\x08 \x01(\x0b\x32 .com.perfdog.proto.CtxSwitchDataH\x00\x12\x35\n\x0bwakeupsData\x18\t \x01(\x0b\x32\x1e.com.perfdog.proto.WakeupsDataH\x00\x12\x35\n\x0b\x62\x61tteryData\x18\n \x01(\x0b\x32\x1e.com.perfdog.proto.BatteryDataH\x00\x12\x35\n\x0bnetworkData\x18\x0b \x01(\x0b\x32\x1e.com.perfdog.proto.NetworkDataH\x00\x12\x33\n\nsyslogData\x18\x0c \x01(\x0b\x32\x1d.com.perfdog.proto.SyslogDataH\x00\x12;\n\x0escreenShotData\x18\r \x01(\x0b\x32!.com.perfdog.proto.ScreenShotDataH\x00\x12\x43\n\x12iosEnergyUsageData\x18\x0e \x01(\x0b\x32%.com.perfdog.proto.IosEnergyUsageDataH\x00\x12=\n\x0f\x62\x61tteryTempData\x18\x0f \x01(\x0b\x32\".com.perfdog.proto.BatteryTempDataH\x00\x42\x07\n\x05value\"\xac\x02\n\x08PerfData\x12\x35\n\x0bwarningData\x18\x01 \x01(\x0b\x32\x1e.com.perfdog.proto.WarningDataH\x00\x12\x31\n\terrorData\x18\x02 \x01(\x0b\x32\x1c.com.perfdog.proto.ErrorDataH\x00\x12=\n\x0f\x61ndroidPerfData\x18\x03 \x01(\x0b\x32\".com.perfdog.proto.AndroidPerfDataH\x00\x12\x35\n\x0biosPerfData\x18\x04 \x01(\x0b\x32\x1e.com.perfdog.proto.IosPerfDataH\x00\x12\x37\n\x0cstartTestRet\x18\x05 \x01(\x0b\x32\x1f.com.perfdog.proto.StartTestRetH\x00\x42\x07\n\x05value\"\xf2\x01\n\rCachePerfData\x12-\n\x07\x61ppInfo\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfoH\x00\x12=\n\x0f\x41ndroidPerfData\x18\x02 \x01(\x0b\x32\".com.perfdog.proto.AndroidPerfDataH\x00\x12\x35\n\x0bIosPerfData\x18\x03 \x01(\x0b\x32\x1e.com.perfdog.proto.IosPerfDataH\x00\x12\x33\n\nDeviceInfo\x18\x04 \x01(\x0b\x32\x1d.com.perfdog.proto.DeviceInfoH\x00\x42\x07\n\x05value\"7\n\x0eScreenshotFile\x12\x10\n\x08\x66ileName\x18\x01 \x01(\t\x12\x13\n\x0b\x66ileContent\x18\x02 \x01(\x0c\"\x7f\n\x13\x43\x61\x63hePerfDataPacked\x12\x12\n\x08perfData\x18\x01 \x01(\x0cH\x00\x12\x0e\n\x04icon\x18\x02 \x01(\x0cH\x00\x12;\n\x0escreenshotFile\x18\x03 \x01(\x0b\x32!.com.perfdog.proto.ScreenshotFileH\x00\x42\x07\n\x05value\"G\n\x0bSetLabelReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\r\n\x05label\x18\x02 \x01(\t\"\x1b\n\x0bSetLabelRet\x12\x0c\n\x04time\x18\x01 \x01(\x03\"X\n\x0eUpdateLabelReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\x12\r\n\x05label\x18\x03 \x01(\t\"S\n\nAddNoteReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\x12\x0c\n\x04note\x18\x03 \x01(\t\"H\n\rRemoveNoteReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x0c\n\x04time\x18\x02 \x01(\x03\"o\n\x16SetDataUploadServerReq\x12\x11\n\tserverUrl\x18\x01 \x01(\t\x12\x42\n\x10\x64\x61taUploadFormat\x18\x02 \x01(\x0e\x32(.com.perfdog.proto.DataInterchangeFormat\"\x18\n\x16SetDataUploadServerRsp\"\xf4\x01\n\x0bSaveDataReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\x11\n\tbeginTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x10\n\x08\x63\x61seName\x18\x04 \x01(\t\x12\x16\n\x0euploadToServer\x18\x05 \x01(\x08\x12\x14\n\x0c\x65xportToFile\x18\x06 \x01(\x08\x12\x17\n\x0foutputDirectory\x18\x07 \x01(\t\x12=\n\x10\x64\x61taExportFormat\x18\x08 \x01(\x0e\x32#.com.perfdog.proto.DataExportFormat\"7\n\x14UploadToServerResult\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0e\n\x06\x63\x61seId\x18\x02 \x01(\t\"7\n\x12\x45xportToFileResult\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x10\n\x08\x66ilePath\x18\x02 \x01(\t\"\x89\x01\n\x0bSaveDataRsp\x12=\n\x0cuploadResult\x18\x01 \x01(\x0b\x32\'.com.perfdog.proto.UploadToServerResult\x12;\n\x0c\x65xportResult\x18\x02 \x01(\x0b\x32%.com.perfdog.proto.ExportToFileResult\"m\n\x17GetAppRunningProcessReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"i\n\x13GetAppWindowsMapReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"7\n\x0bProcessInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05isTop\x18\x02 \x01(\x08\x12\x0b\n\x03pid\x18\x03 \x01(\x05\"N\n\x17GetAppRunningProcessRet\x12\x33\n\x0bprocessInfo\x18\x01 \x03(\x0b\x32\x1e.com.perfdog.proto.ProcessInfo\"\x19\n\tAppWindow\x12\x0c\n\x04name\x18\x01 \x03(\t\"\xbb\x01\n\x13GetAppWindowsMapRet\x12P\n\rpid2WindowMap\x18\x01 \x03(\x0b\x32\x39.com.perfdog.proto.GetAppWindowsMapRet.Pid2WindowMapEntry\x1aR\n\x12Pid2WindowMapEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.com.perfdog.proto.AppWindow:\x02\x38\x01\"+\n\x0eSysProcessInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\x05\"Q\n\x17GetRunningSysProcessRet\x12\x36\n\x0bprocessInfo\x18\x01 \x03(\x0b\x32!.com.perfdog.proto.SysProcessInfo\"\x93\x01\n\x12IosEnergyUsageData\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07\x61\x62sTime\x18\x02 \x01(\x03\x12\x0b\n\x03\x63pu\x18\x03 \x01(\x05\x12\x0b\n\x03gpu\x18\x04 \x01(\x05\x12\x0f\n\x07network\x18\x05 \x01(\x05\x12\x10\n\x08location\x18\x06 \x01(\x05\x12\x0f\n\x07\x64isplay\x18\x07 \x01(\x05\x12\x10\n\x08overhead\x18\x08 \x01(\x05\"f\n\x10UpdateAppInfoReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12\'\n\x03\x61pp\x18\x02 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\";\n\x10UpdateAppInfoRet\x12\'\n\x03\x61pp\x18\x01 \x01(\x0b\x32\x1a.com.perfdog.proto.AppInfo\"B\n\x15GetDeviceCacheDataReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\"\x86\x01\n\x1bGetDeviceCacheDataPackedReq\x12)\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.com.perfdog.proto.Device\x12<\n\ndataFormat\x18\x02 \x01(\x0e\x32(.com.perfdog.proto.DataInterchangeFormat\"!\n\rCreateTaskReq\x12\x10\n\x08taskName\x18\x01 \x01(\t\"\x1f\n\rCreateTaskRsp\x12\x0e\n\x06taskId\x18\x01 \x01(\t\"6\n\x14\x41rchiveCaseToTaskReq\x12\x0e\n\x06\x63\x61seId\x18\x01 \x01(\t\x12\x0e\n\x06taskId\x18\x02 \x01(\t\"\x16\n\x14\x41rchiveCaseToTaskRsp\"G\n\x0cShareCaseReq\x12\x0e\n\x06\x63\x61seId\x18\x01 \x01(\t\x12\x12\n\nexpireTime\x18\x02 \x01(\x05\x12\x13\n\x0bnonPassword\x18\x03 \x01(\x08\"1\n\x0cShareCaseRsp\x12\x0f\n\x07\x63\x61seUrl\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t*\'\n\x10\x44\x45VICE_EVENTTYPE\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\n\n\x06REMOVE\x10\x01*%\n\rDEVICE_OSTYPE\x12\x0b\n\x07\x41NDROID\x10\x00\x12\x07\n\x03IOS\x10\x01*#\n\x0e\x44\x45VICE_CONTYPE\x12\x07\n\x03USB\x10\x00\x12\x08\n\x04WIFI\x10\x01*\xf5\x03\n\x0cPerfDataType\x12\x0f\n\x0b\x44\x41TAID_NONE\x10\x00\x12\r\n\tCPU_USAGE\x10\x01\x12\r\n\tGPU_USAGE\x10\x02\x12\x0c\n\x08GPU_FREQ\x10\x03\x12\x07\n\x03\x46PS\x10\x04\x12\x11\n\rNETWORK_USAGE\x10\x05\x12\x19\n\x15\x41NDROID_MEMORY_DETAIL\x10\x06\x12\n\n\x06MEMORY\x10\x07\x12\x0b\n\x07\x42\x41TTERY\x10\x08\x12\x13\n\x0f\x43PU_TEMPERATURE\x10\t\x12\x0e\n\nFRAME_TIME\x10\n\x12\x0e\n\nCTX_SWITCH\x10\x0b\x12\n\n\x06WAKEUP\x10\x0c\x12\x0f\n\x0bSCREEN_SHOT\x10\r\x12\x0e\n\nSYSTEM_LOG\x10\x0e\x12\x12\n\x0e\x43ORE_FREQUENCY\x10\x0f\x12\x0e\n\nCORE_USAGE\x10\x10\x12\x11\n\rIOS_GPU_USAGE\x10\x11\x12\x14\n\x10IOS_ENERGY_USAGE\x10\x12\x12\x17\n\x13\x42\x41TTERY_TEMPERATURE\x10\x13\x12\x18\n\x14NORMALIZED_CPU_USAGE\x10\x14\x12\x1d\n\x19NORMALIZED_CPU_CORE_USAGE\x10\x15\x12\x1b\n\x17GPU_COUNTER_UTILIZATION\x10\x16\x12\x1d\n\x19GPU_COUNTER_MEMORY_ACCESS\x10\x17\x12\x1b\n\x17GPU_COUNTER_PIXELS_INFO\x10\x18*S\n\x10\x44\x61taExportFormat\x12\x13\n\x0f\x45XPORT_TO_EXCEL\x10\x00\x12\x12\n\x0e\x45XPORT_TO_JSON\x10\x01\x12\x16\n\x12\x45XPORT_TO_PROTOBUF\x10\x02*/\n\x15\x44\x61taInterchangeFormat\x12\x08\n\x04JSON\x10\x00\x12\x0c\n\x08PROTOBUF\x10\x01\x32\x80\x17\n\x0ePerfDogService\x12I\n\x0eloginWithToken\x12\x18.com.perfdog.proto.Token\x1a\x1b.com.perfdog.proto.UserInfo\"\x00\x12R\n\x12startDeviceMonitor\x12\x18.com.perfdog.proto.Empty\x1a\x1e.com.perfdog.proto.DeviceEvent\"\x00\x30\x01\x12\x43\n\ninitDevice\x12\x19.com.perfdog.proto.Device\x1a\x18.com.perfdog.proto.Empty\"\x00\x12K\n\rgetDeviceInfo\x12\x19.com.perfdog.proto.Device\x1a\x1d.com.perfdog.proto.DeviceInfo\"\x00\x12O\n\x0fgetDeviceStatus\x12\x19.com.perfdog.proto.Device\x1a\x1f.com.perfdog.proto.DeviceStatus\"\x00\x12\x45\n\ngetAppList\x12\x19.com.perfdog.proto.Device\x1a\x1a.com.perfdog.proto.AppList\"\x00\x12Z\n\x12\x65nablePerfDataType\x12(.com.perfdog.proto.EnablePerfDataTypeReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12\\\n\x13\x64isablePerfDataType\x12).com.perfdog.proto.DisablePerfDataTypeReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12R\n\x0fgetPerfDataType\x12\x19.com.perfdog.proto.Device\x1a\".com.perfdog.proto.PerfDataTypeRet\"\x00\x12W\n\x14getAvailableDataType\x12\x19.com.perfdog.proto.Device\x1a\".com.perfdog.proto.PerfDataTypeRet\"\x00\x12Z\n\x15setScreenShotInterval\x12%.com.perfdog.proto.ScreenShotInterval\x1a\x18.com.perfdog.proto.Empty\"\x00\x12[\n\x14StartTestAppInternal\x12\".com.perfdog.proto.StartTestAppReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12i\n\x1bStartTestSysProcessInternal\x12).com.perfdog.proto.StartTestSysProcessReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12U\n\x0cstartTestApp\x12\".com.perfdog.proto.StartTestAppReq\x1a\x1f.com.perfdog.proto.StartTestRet\"\x00\x12\x63\n\x13startTestSysProcess\x12).com.perfdog.proto.StartTestSysProcessReq\x1a\x1f.com.perfdog.proto.StartTestRet\"\x00\x12_\n\x12openPerfDataStream\x12(.com.perfdog.proto.OpenPerfDataStreamReq\x1a\x1b.com.perfdog.proto.PerfData\"\x00\x30\x01\x12\x46\n\x08stopTest\x12\x1e.com.perfdog.proto.StopTestReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12L\n\x08setLabel\x12\x1e.com.perfdog.proto.SetLabelReq\x1a\x1e.com.perfdog.proto.SetLabelRet\"\x00\x12L\n\x0bupdateLabel\x12!.com.perfdog.proto.UpdateLabelReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12\x44\n\x07\x61\x64\x64Note\x12\x1d.com.perfdog.proto.AddNoteReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12J\n\nremoveNote\x12 .com.perfdog.proto.RemoveNoteReq\x1a\x18.com.perfdog.proto.Empty\"\x00\x12s\n\x19setGlobalDataUploadServer\x12).com.perfdog.proto.SetDataUploadServerReq\x1a).com.perfdog.proto.SetDataUploadServerRsp\"\x00\x12L\n\x08saveData\x12\x1e.com.perfdog.proto.SaveDataReq\x1a\x1e.com.perfdog.proto.SaveDataRsp\"\x00\x12\x64\n\x12getDeviceCacheData\x12(.com.perfdog.proto.GetDeviceCacheDataReq\x1a .com.perfdog.proto.CachePerfData\"\x00\x30\x01\x12v\n\x18getDeviceCacheDataPacked\x12..com.perfdog.proto.GetDeviceCacheDataPackedReq\x1a&.com.perfdog.proto.CachePerfDataPacked\"\x00\x30\x01\x12p\n\x14getAppRunningProcess\x12*.com.perfdog.proto.GetAppRunningProcessReq\x1a*.com.perfdog.proto.GetAppRunningProcessRet\"\x00\x12\x64\n\x10getAppWindowsMap\x12&.com.perfdog.proto.GetAppWindowsMapReq\x1a&.com.perfdog.proto.GetAppWindowsMapRet\"\x00\x12_\n\x14getRunningSysProcess\x12\x19.com.perfdog.proto.Device\x1a*.com.perfdog.proto.GetRunningSysProcessRet\"\x00\x12[\n\rupdateAppInfo\x12#.com.perfdog.proto.UpdateAppInfoReq\x1a#.com.perfdog.proto.UpdateAppInfoRet\"\x00\x12R\n\ncreateTask\x12 .com.perfdog.proto.CreateTaskReq\x1a .com.perfdog.proto.CreateTaskRsp\"\x00\x12g\n\x11\x61rchiveCaseToTask\x12\'.com.perfdog.proto.ArchiveCaseToTaskReq\x1a\'.com.perfdog.proto.ArchiveCaseToTaskRsp\"\x00\x12O\n\tshareCase\x12\x1f.com.perfdog.proto.ShareCaseReq\x1a\x1f.com.perfdog.proto.ShareCaseRsp\"\x00\x12\x42\n\nkillServer\x12\x18.com.perfdog.proto.Empty\x1a\x18.com.perfdog.proto.Empty\"\x00\x42\x02P\x01\x62\x06proto3'
 )
 
 _DEVICE_EVENTTYPE = _descriptor.EnumDescriptor(
@@ -39,8 +39,8 @@ _DEVICE_EVENTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8527,
-  serialized_end=8566,
+  serialized_start=9533,
+  serialized_end=9572,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_EVENTTYPE)
 
@@ -62,8 +62,8 @@ _DEVICE_OSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8568,
-  serialized_end=8605,
+  serialized_start=9574,
+  serialized_end=9611,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_OSTYPE)
 
@@ -85,8 +85,8 @@ _DEVICE_CONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8607,
-  serialized_end=8642,
+  serialized_start=9613,
+  serialized_end=9648,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICE_CONTYPE)
 
@@ -185,11 +185,23 @@ _PERFDATATYPE = _descriptor.EnumDescriptor(
       name='NORMALIZED_CPU_CORE_USAGE', index=21, number=21,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GPU_COUNTER_UTILIZATION', index=22, number=22,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GPU_COUNTER_MEMORY_ACCESS', index=23, number=23,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='GPU_COUNTER_PIXELS_INFO', index=24, number=24,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8645,
-  serialized_end=9057,
+  serialized_start=9651,
+  serialized_end=10152,
 )
 _sym_db.RegisterEnumDescriptor(_PERFDATATYPE)
 
@@ -215,8 +227,8 @@ _DATAEXPORTFORMAT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9059,
-  serialized_end=9142,
+  serialized_start=10154,
+  serialized_end=10237,
 )
 _sym_db.RegisterEnumDescriptor(_DATAEXPORTFORMAT)
 
@@ -238,8 +250,8 @@ _DATAINTERCHANGEFORMAT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9144,
-  serialized_end=9191,
+  serialized_start=10239,
+  serialized_end=10286,
 )
 _sym_db.RegisterEnumDescriptor(_DATAINTERCHANGEFORMAT)
 
@@ -272,12 +284,77 @@ IOS_ENERGY_USAGE = 18
 BATTERY_TEMPERATURE = 19
 NORMALIZED_CPU_USAGE = 20
 NORMALIZED_CPU_CORE_USAGE = 21
+GPU_COUNTER_UTILIZATION = 22
+GPU_COUNTER_MEMORY_ACCESS = 23
+GPU_COUNTER_PIXELS_INFO = 24
 EXPORT_TO_EXCEL = 0
 EXPORT_TO_JSON = 1
 EXPORT_TO_PROTOBUF = 2
 JSON = 0
 PROTOBUF = 1
 
+
+
+_OPTIONALINT = _descriptor.Descriptor(
+  name='OptionalInt',
+  full_name='com.perfdog.proto.OptionalInt',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='com.perfdog.proto.OptionalInt.value', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=36,
+  serialized_end=64,
+)
+
+
+_OPTIONALFLOAT = _descriptor.Descriptor(
+  name='OptionalFloat',
+  full_name='com.perfdog.proto.OptionalFloat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='com.perfdog.proto.OptionalFloat.value', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66,
+  serialized_end=96,
+)
 
 
 _EMPTY = _descriptor.Descriptor(
@@ -299,8 +376,8 @@ _EMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36,
-  serialized_end=43,
+  serialized_start=98,
+  serialized_end=105,
 )
 
 
@@ -330,8 +407,8 @@ _TOKEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=67,
+  serialized_start=107,
+  serialized_end=129,
 )
 
 
@@ -382,8 +459,8 @@ _USERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=69,
-  serialized_end=133,
+  serialized_start=131,
+  serialized_end=195,
 )
 
 
@@ -434,8 +511,8 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=136,
-  serialized_end=273,
+  serialized_start=198,
+  serialized_end=335,
 )
 
 
@@ -472,8 +549,8 @@ _DEVICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=387,
+  serialized_start=337,
+  serialized_end=449,
 )
 
 
@@ -510,8 +587,8 @@ _DEVICEINFO_VALUEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=460,
-  serialized_end=504,
+  serialized_start=522,
+  serialized_end=566,
 )
 
 _DEVICEINFO = _descriptor.Descriptor(
@@ -540,8 +617,8 @@ _DEVICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=504,
+  serialized_start=451,
+  serialized_end=566,
 )
 
 
@@ -585,8 +662,8 @@ _DEVICESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=506,
-  serialized_end=587,
+  serialized_start=568,
+  serialized_end=649,
 )
 
 
@@ -658,8 +735,8 @@ _APPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=728,
+  serialized_start=652,
+  serialized_end=790,
 )
 
 
@@ -689,8 +766,8 @@ _APPLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=730,
-  serialized_end=780,
+  serialized_start=792,
+  serialized_end=842,
 )
 
 
@@ -727,8 +804,8 @@ _ENABLEPERFDATATYPEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=782,
-  serialized_end=895,
+  serialized_start=844,
+  serialized_end=957,
 )
 
 
@@ -765,8 +842,8 @@ _DISABLEPERFDATATYPEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=897,
-  serialized_end=1011,
+  serialized_start=959,
+  serialized_end=1073,
 )
 
 
@@ -796,8 +873,8 @@ _PERFDATATYPERET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1013,
-  serialized_end=1077,
+  serialized_start=1075,
+  serialized_end=1139,
 )
 
 
@@ -834,8 +911,8 @@ _SCREENSHOTINTERVAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1079,
-  serialized_end=1158,
+  serialized_start=1141,
+  serialized_end=1220,
 )
 
 
@@ -893,8 +970,8 @@ _STARTTESTAPPREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1161,
-  serialized_end=1329,
+  serialized_start=1223,
+  serialized_end=1391,
 )
 
 
@@ -938,8 +1015,8 @@ _STARTTESTSYSPROCESSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1332,
-  serialized_end=1486,
+  serialized_start=1394,
+  serialized_end=1548,
 )
 
 
@@ -969,8 +1046,8 @@ _STARTTESTRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1488,
-  serialized_end=1515,
+  serialized_start=1550,
+  serialized_end=1577,
 )
 
 
@@ -1000,8 +1077,8 @@ _OPENPERFDATASTREAMREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1517,
-  serialized_end=1583,
+  serialized_start=1579,
+  serialized_end=1645,
 )
 
 
@@ -1031,8 +1108,8 @@ _STOPTESTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1585,
-  serialized_end=1641,
+  serialized_start=1647,
+  serialized_end=1703,
 )
 
 
@@ -1076,8 +1153,8 @@ _FRAMETIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1643,
-  serialized_end=1704,
+  serialized_start=1705,
+  serialized_end=1766,
 )
 
 
@@ -1135,8 +1212,8 @@ _FPSDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1706,
-  serialized_end=1788,
+  serialized_start=1768,
+  serialized_end=1850,
 )
 
 
@@ -1166,8 +1243,8 @@ _FRAMETIMEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1790,
-  serialized_end=1854,
+  serialized_start=1852,
+  serialized_end=1916,
 )
 
 
@@ -1225,8 +1302,8 @@ _JANKDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1856,
-  serialized_end=1945,
+  serialized_start=1918,
+  serialized_end=2007,
 )
 
 
@@ -1270,8 +1347,8 @@ _ANDROIDGPUUSAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1947,
-  serialized_end=2017,
+  serialized_start=2009,
+  serialized_end=2079,
 )
 
 
@@ -1329,8 +1406,8 @@ _IOSGPUUSAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2019,
-  serialized_end=2129,
+  serialized_start=2081,
+  serialized_end=2191,
 )
 
 
@@ -1374,8 +1451,8 @@ _GPUFREQDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2131,
-  serialized_end=2192,
+  serialized_start=2193,
+  serialized_end=2254,
 )
 
 
@@ -1421,6 +1498,13 @@ _ANDROIDMEMDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='availableMemory', full_name='com.perfdog.proto.AndroidMemData.availableMemory', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1433,8 +1517,8 @@ _ANDROIDMEMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2194,
-  serialized_end=2291,
+  serialized_start=2256,
+  serialized_end=2378,
 )
 
 
@@ -1499,8 +1583,8 @@ _ANDROIDMEMDETAILDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2293,
-  serialized_end=2407,
+  serialized_start=2380,
+  serialized_end=2494,
 )
 
 
@@ -1539,6 +1623,13 @@ _IOS10MEMDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='availableMemory', full_name='com.perfdog.proto.Ios10MemData.availableMemory', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1551,8 +1642,8 @@ _IOS10MEMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2409,
-  serialized_end=2497,
+  serialized_start=2496,
+  serialized_end=2609,
 )
 
 
@@ -1605,6 +1696,13 @@ _IOS11MEMDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='availableMemory', full_name='com.perfdog.proto.Ios11MemData.availableMemory', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1617,8 +1715,8 @@ _IOS11MEMDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2499,
-  serialized_end=2624,
+  serialized_start=2612,
+  serialized_end=2762,
 )
 
 
@@ -1662,8 +1760,8 @@ _COREUSAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2626,
-  serialized_end=2691,
+  serialized_start=2764,
+  serialized_end=2829,
 )
 
 
@@ -1707,8 +1805,8 @@ _CPUFREQDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2693,
-  serialized_end=2754,
+  serialized_start=2831,
+  serialized_end=2892,
 )
 
 
@@ -1759,8 +1857,8 @@ _CPUUSAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2756,
-  serialized_end=2839,
+  serialized_start=2894,
+  serialized_end=2977,
 )
 
 
@@ -1804,8 +1902,8 @@ _CPUTEMPDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2841,
-  serialized_end=2899,
+  serialized_start=2979,
+  serialized_end=3037,
 )
 
 
@@ -1849,8 +1947,8 @@ _BATTERYTEMPDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2901,
-  serialized_end=2963,
+  serialized_start=3039,
+  serialized_end=3101,
 )
 
 
@@ -1894,8 +1992,8 @@ _CTXSWITCHDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2965,
-  serialized_end=3030,
+  serialized_start=3103,
+  serialized_end=3168,
 )
 
 
@@ -1939,8 +2037,8 @@ _WAKEUPSDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3032,
-  serialized_end=3093,
+  serialized_start=3170,
+  serialized_end=3231,
 )
 
 
@@ -1998,8 +2096,8 @@ _BATTERYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3095,
-  serialized_end=3188,
+  serialized_start=3233,
+  serialized_end=3326,
 )
 
 
@@ -2050,8 +2148,8 @@ _NETWORKDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3190,
-  serialized_end=3268,
+  serialized_start=3328,
+  serialized_end=3406,
 )
 
 
@@ -2081,8 +2179,8 @@ _SYSLOGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3270,
-  serialized_end=3295,
+  serialized_start=3408,
+  serialized_end=3433,
 )
 
 
@@ -2126,8 +2224,8 @@ _SCREENSHOTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3297,
-  serialized_end=3358,
+  serialized_start=3435,
+  serialized_end=3496,
 )
 
 
@@ -2157,8 +2255,8 @@ _WARNINGDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3360,
-  serialized_end=3386,
+  serialized_start=3498,
+  serialized_end=3524,
 )
 
 
@@ -2188,8 +2286,178 @@ _ERRORDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3388,
-  serialized_end=3412,
+  serialized_start=3526,
+  serialized_end=3550,
+)
+
+
+_GPUCOUNTERUTILIZATION = _descriptor.Descriptor(
+  name='GpuCounterUtilization',
+  full_name='com.perfdog.proto.GpuCounterUtilization',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='com.perfdog.proto.GpuCounterUtilization.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='absTime', full_name='com.perfdog.proto.GpuCounterUtilization.absTime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nonFragmentUtilization', full_name='com.perfdog.proto.GpuCounterUtilization.nonFragmentUtilization', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fragmentUtilization', full_name='com.perfdog.proto.GpuCounterUtilization.fragmentUtilization', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3553,
+  serialized_end=3736,
+)
+
+
+_GPUCOUNTERPIXELSINFO = _descriptor.Descriptor(
+  name='GpuCounterPixelsInfo',
+  full_name='com.perfdog.proto.GpuCounterPixelsInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='com.perfdog.proto.GpuCounterPixelsInfo.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='absTime', full_name='com.perfdog.proto.GpuCounterPixelsInfo.absTime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='overDraw', full_name='com.perfdog.proto.GpuCounterPixelsInfo.overDraw', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pixelThroughput', full_name='com.perfdog.proto.GpuCounterPixelsInfo.pixelThroughput', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3739,
+  serialized_end=3903,
+)
+
+
+_GPUCOUNTERMEMORYACCESS = _descriptor.Descriptor(
+  name='GpuCounterMemoryAccess',
+  full_name='com.perfdog.proto.GpuCounterMemoryAccess',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='com.perfdog.proto.GpuCounterMemoryAccess.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='absTime', full_name='com.perfdog.proto.GpuCounterMemoryAccess.absTime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='l2LoadStoreRead', full_name='com.perfdog.proto.GpuCounterMemoryAccess.l2LoadStoreRead', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='l2TextureRead', full_name='com.perfdog.proto.GpuCounterMemoryAccess.l2TextureRead', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='busRead', full_name='com.perfdog.proto.GpuCounterMemoryAccess.busRead', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='busWrite', full_name='com.perfdog.proto.GpuCounterMemoryAccess.busWrite', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3906,
+  serialized_end=4172,
 )
 
 
@@ -2319,6 +2587,27 @@ _ANDROIDPERFDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gpuCounterUtilization', full_name='com.perfdog.proto.AndroidPerfData.gpuCounterUtilization', index=17,
+      number=18, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gpuCounterPixelsInfo', full_name='com.perfdog.proto.AndroidPerfData.gpuCounterPixelsInfo', index=18,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gpuCounterMemoryAccess', full_name='com.perfdog.proto.AndroidPerfData.gpuCounterMemoryAccess', index=19,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -2334,8 +2623,8 @@ _ANDROIDPERFDATA = _descriptor.Descriptor(
       name='value', full_name='com.perfdog.proto.AndroidPerfData.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=3415,
-  serialized_end=4445,
+  serialized_start=4175,
+  serialized_end=5430,
 )
 
 
@@ -2466,8 +2755,8 @@ _IOSPERFDATA = _descriptor.Descriptor(
       name='value', full_name='com.perfdog.proto.IosPerfData.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=4448,
-  serialized_end=5329,
+  serialized_start=5433,
+  serialized_end=6314,
 )
 
 
@@ -2528,8 +2817,8 @@ _PERFDATA = _descriptor.Descriptor(
       name='value', full_name='com.perfdog.proto.PerfData.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=5332,
-  serialized_end=5632,
+  serialized_start=6317,
+  serialized_end=6617,
 )
 
 
@@ -2583,8 +2872,8 @@ _CACHEPERFDATA = _descriptor.Descriptor(
       name='value', full_name='com.perfdog.proto.CachePerfData.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=5635,
-  serialized_end=5877,
+  serialized_start=6620,
+  serialized_end=6862,
 )
 
 
@@ -2621,8 +2910,8 @@ _SCREENSHOTFILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5879,
-  serialized_end=5934,
+  serialized_start=6864,
+  serialized_end=6919,
 )
 
 
@@ -2669,8 +2958,8 @@ _CACHEPERFDATAPACKED = _descriptor.Descriptor(
       name='value', full_name='com.perfdog.proto.CachePerfDataPacked.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=5936,
-  serialized_end=6063,
+  serialized_start=6921,
+  serialized_end=7048,
 )
 
 
@@ -2707,8 +2996,8 @@ _SETLABELREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6065,
-  serialized_end=6136,
+  serialized_start=7050,
+  serialized_end=7121,
 )
 
 
@@ -2738,8 +3027,8 @@ _SETLABELRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6138,
-  serialized_end=6165,
+  serialized_start=7123,
+  serialized_end=7150,
 )
 
 
@@ -2783,8 +3072,8 @@ _UPDATELABELREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6167,
-  serialized_end=6255,
+  serialized_start=7152,
+  serialized_end=7240,
 )
 
 
@@ -2828,8 +3117,8 @@ _ADDNOTEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6257,
-  serialized_end=6340,
+  serialized_start=7242,
+  serialized_end=7325,
 )
 
 
@@ -2866,8 +3155,8 @@ _REMOVENOTEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6342,
-  serialized_end=6414,
+  serialized_start=7327,
+  serialized_end=7399,
 )
 
 
@@ -2904,8 +3193,8 @@ _SETDATAUPLOADSERVERREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6416,
-  serialized_end=6527,
+  serialized_start=7401,
+  serialized_end=7512,
 )
 
 
@@ -2928,8 +3217,8 @@ _SETDATAUPLOADSERVERRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6529,
-  serialized_end=6553,
+  serialized_start=7514,
+  serialized_end=7538,
 )
 
 
@@ -3008,8 +3297,8 @@ _SAVEDATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6556,
-  serialized_end=6800,
+  serialized_start=7541,
+  serialized_end=7785,
 )
 
 
@@ -3046,8 +3335,8 @@ _UPLOADTOSERVERRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6802,
-  serialized_end=6857,
+  serialized_start=7787,
+  serialized_end=7842,
 )
 
 
@@ -3084,8 +3373,8 @@ _EXPORTTOFILERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6859,
-  serialized_end=6914,
+  serialized_start=7844,
+  serialized_end=7899,
 )
 
 
@@ -3122,8 +3411,8 @@ _SAVEDATARSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6917,
-  serialized_end=7054,
+  serialized_start=7902,
+  serialized_end=8039,
 )
 
 
@@ -3160,8 +3449,8 @@ _GETAPPRUNNINGPROCESSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7056,
-  serialized_end=7165,
+  serialized_start=8041,
+  serialized_end=8150,
 )
 
 
@@ -3198,8 +3487,8 @@ _GETAPPWINDOWSMAPREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7167,
-  serialized_end=7272,
+  serialized_start=8152,
+  serialized_end=8257,
 )
 
 
@@ -3243,8 +3532,8 @@ _PROCESSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7274,
-  serialized_end=7329,
+  serialized_start=8259,
+  serialized_end=8314,
 )
 
 
@@ -3274,8 +3563,8 @@ _GETAPPRUNNINGPROCESSRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7331,
-  serialized_end=7409,
+  serialized_start=8316,
+  serialized_end=8394,
 )
 
 
@@ -3305,8 +3594,8 @@ _APPWINDOW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7411,
-  serialized_end=7436,
+  serialized_start=8396,
+  serialized_end=8421,
 )
 
 
@@ -3343,8 +3632,8 @@ _GETAPPWINDOWSMAPRET_PID2WINDOWMAPENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7544,
-  serialized_end=7626,
+  serialized_start=8529,
+  serialized_end=8611,
 )
 
 _GETAPPWINDOWSMAPRET = _descriptor.Descriptor(
@@ -3373,8 +3662,8 @@ _GETAPPWINDOWSMAPRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7439,
-  serialized_end=7626,
+  serialized_start=8424,
+  serialized_end=8611,
 )
 
 
@@ -3411,8 +3700,8 @@ _SYSPROCESSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7628,
-  serialized_end=7671,
+  serialized_start=8613,
+  serialized_end=8656,
 )
 
 
@@ -3442,8 +3731,8 @@ _GETRUNNINGSYSPROCESSRET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7673,
-  serialized_end=7754,
+  serialized_start=8658,
+  serialized_end=8739,
 )
 
 
@@ -3522,8 +3811,8 @@ _IOSENERGYUSAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7757,
-  serialized_end=7904,
+  serialized_start=8742,
+  serialized_end=8889,
 )
 
 
@@ -3560,8 +3849,8 @@ _UPDATEAPPINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7906,
-  serialized_end=8008,
+  serialized_start=8891,
+  serialized_end=8993,
 )
 
 
@@ -3591,8 +3880,8 @@ _UPDATEAPPINFORET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8010,
-  serialized_end=8069,
+  serialized_start=8995,
+  serialized_end=9054,
 )
 
 
@@ -3622,8 +3911,8 @@ _GETDEVICECACHEDATAREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8071,
-  serialized_end=8137,
+  serialized_start=9056,
+  serialized_end=9122,
 )
 
 
@@ -3660,8 +3949,8 @@ _GETDEVICECACHEDATAPACKEDREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8140,
-  serialized_end=8274,
+  serialized_start=9125,
+  serialized_end=9259,
 )
 
 
@@ -3691,8 +3980,8 @@ _CREATETASKREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8276,
-  serialized_end=8309,
+  serialized_start=9261,
+  serialized_end=9294,
 )
 
 
@@ -3722,8 +4011,8 @@ _CREATETASKRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8311,
-  serialized_end=8342,
+  serialized_start=9296,
+  serialized_end=9327,
 )
 
 
@@ -3760,8 +4049,8 @@ _ARCHIVECASETOTASKREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8344,
-  serialized_end=8398,
+  serialized_start=9329,
+  serialized_end=9383,
 )
 
 
@@ -3784,8 +4073,8 @@ _ARCHIVECASETOTASKRSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8400,
-  serialized_end=8422,
+  serialized_start=9385,
+  serialized_end=9407,
 )
 
 
@@ -3810,6 +4099,13 @@ _SHARECASEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='nonPassword', full_name='com.perfdog.proto.ShareCaseReq.nonPassword', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -3822,8 +4118,8 @@ _SHARECASEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8424,
-  serialized_end=8474,
+  serialized_start=9409,
+  serialized_end=9480,
 )
 
 
@@ -3860,8 +4156,8 @@ _SHARECASERSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8476,
-  serialized_end=8525,
+  serialized_start=9482,
+  serialized_end=9531,
 )
 
 _DEVICE.fields_by_name['osType'].enum_type = _DEVICE_OSTYPE
@@ -3884,6 +4180,14 @@ _STARTTESTSYSPROCESSREQ.fields_by_name['sysProcessInfo'].message_type = _SYSPROC
 _OPENPERFDATASTREAMREQ.fields_by_name['device'].message_type = _DEVICE
 _STOPTESTREQ.fields_by_name['device'].message_type = _DEVICE
 _FRAMETIMEDATA.fields_by_name['frameTime'].message_type = _FRAMETIME
+_GPUCOUNTERUTILIZATION.fields_by_name['nonFragmentUtilization'].message_type = _OPTIONALFLOAT
+_GPUCOUNTERUTILIZATION.fields_by_name['fragmentUtilization'].message_type = _OPTIONALFLOAT
+_GPUCOUNTERPIXELSINFO.fields_by_name['overDraw'].message_type = _OPTIONALFLOAT
+_GPUCOUNTERPIXELSINFO.fields_by_name['pixelThroughput'].message_type = _OPTIONALFLOAT
+_GPUCOUNTERMEMORYACCESS.fields_by_name['l2LoadStoreRead'].message_type = _OPTIONALINT
+_GPUCOUNTERMEMORYACCESS.fields_by_name['l2TextureRead'].message_type = _OPTIONALINT
+_GPUCOUNTERMEMORYACCESS.fields_by_name['busRead'].message_type = _OPTIONALINT
+_GPUCOUNTERMEMORYACCESS.fields_by_name['busWrite'].message_type = _OPTIONALINT
 _ANDROIDPERFDATA.fields_by_name['fpsData'].message_type = _FPSDATA
 _ANDROIDPERFDATA.fields_by_name['frameTimeData'].message_type = _FRAMETIMEDATA
 _ANDROIDPERFDATA.fields_by_name['jankData'].message_type = _JANKDATA
@@ -3901,6 +4205,9 @@ _ANDROIDPERFDATA.fields_by_name['syslogData'].message_type = _SYSLOGDATA
 _ANDROIDPERFDATA.fields_by_name['screenShotData'].message_type = _SCREENSHOTDATA
 _ANDROIDPERFDATA.fields_by_name['normalizedCpuUsageData'].message_type = _CPUUSAGEDATA
 _ANDROIDPERFDATA.fields_by_name['normalizedCpuCoreUsageData'].message_type = _COREUSAGEDATA
+_ANDROIDPERFDATA.fields_by_name['gpuCounterUtilization'].message_type = _GPUCOUNTERUTILIZATION
+_ANDROIDPERFDATA.fields_by_name['gpuCounterPixelsInfo'].message_type = _GPUCOUNTERPIXELSINFO
+_ANDROIDPERFDATA.fields_by_name['gpuCounterMemoryAccess'].message_type = _GPUCOUNTERMEMORYACCESS
 _ANDROIDPERFDATA.oneofs_by_name['value'].fields.append(
   _ANDROIDPERFDATA.fields_by_name['fpsData'])
 _ANDROIDPERFDATA.fields_by_name['fpsData'].containing_oneof = _ANDROIDPERFDATA.oneofs_by_name['value']
@@ -3952,6 +4259,15 @@ _ANDROIDPERFDATA.fields_by_name['normalizedCpuUsageData'].containing_oneof = _AN
 _ANDROIDPERFDATA.oneofs_by_name['value'].fields.append(
   _ANDROIDPERFDATA.fields_by_name['normalizedCpuCoreUsageData'])
 _ANDROIDPERFDATA.fields_by_name['normalizedCpuCoreUsageData'].containing_oneof = _ANDROIDPERFDATA.oneofs_by_name['value']
+_ANDROIDPERFDATA.oneofs_by_name['value'].fields.append(
+  _ANDROIDPERFDATA.fields_by_name['gpuCounterUtilization'])
+_ANDROIDPERFDATA.fields_by_name['gpuCounterUtilization'].containing_oneof = _ANDROIDPERFDATA.oneofs_by_name['value']
+_ANDROIDPERFDATA.oneofs_by_name['value'].fields.append(
+  _ANDROIDPERFDATA.fields_by_name['gpuCounterPixelsInfo'])
+_ANDROIDPERFDATA.fields_by_name['gpuCounterPixelsInfo'].containing_oneof = _ANDROIDPERFDATA.oneofs_by_name['value']
+_ANDROIDPERFDATA.oneofs_by_name['value'].fields.append(
+  _ANDROIDPERFDATA.fields_by_name['gpuCounterMemoryAccess'])
+_ANDROIDPERFDATA.fields_by_name['gpuCounterMemoryAccess'].containing_oneof = _ANDROIDPERFDATA.oneofs_by_name['value']
 _IOSPERFDATA.fields_by_name['fpsData'].message_type = _FPSDATA
 _IOSPERFDATA.fields_by_name['frameTimeData'].message_type = _FRAMETIMEDATA
 _IOSPERFDATA.fields_by_name['jankData'].message_type = _JANKDATA
@@ -4082,6 +4398,8 @@ _UPDATEAPPINFORET.fields_by_name['app'].message_type = _APPINFO
 _GETDEVICECACHEDATAREQ.fields_by_name['device'].message_type = _DEVICE
 _GETDEVICECACHEDATAPACKEDREQ.fields_by_name['device'].message_type = _DEVICE
 _GETDEVICECACHEDATAPACKEDREQ.fields_by_name['dataFormat'].enum_type = _DATAINTERCHANGEFORMAT
+DESCRIPTOR.message_types_by_name['OptionalInt'] = _OPTIONALINT
+DESCRIPTOR.message_types_by_name['OptionalFloat'] = _OPTIONALFLOAT
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 DESCRIPTOR.message_types_by_name['Token'] = _TOKEN
 DESCRIPTOR.message_types_by_name['UserInfo'] = _USERINFO
@@ -4124,6 +4442,9 @@ DESCRIPTOR.message_types_by_name['SyslogData'] = _SYSLOGDATA
 DESCRIPTOR.message_types_by_name['ScreenShotData'] = _SCREENSHOTDATA
 DESCRIPTOR.message_types_by_name['WarningData'] = _WARNINGDATA
 DESCRIPTOR.message_types_by_name['ErrorData'] = _ERRORDATA
+DESCRIPTOR.message_types_by_name['GpuCounterUtilization'] = _GPUCOUNTERUTILIZATION
+DESCRIPTOR.message_types_by_name['GpuCounterPixelsInfo'] = _GPUCOUNTERPIXELSINFO
+DESCRIPTOR.message_types_by_name['GpuCounterMemoryAccess'] = _GPUCOUNTERMEMORYACCESS
 DESCRIPTOR.message_types_by_name['AndroidPerfData'] = _ANDROIDPERFDATA
 DESCRIPTOR.message_types_by_name['IosPerfData'] = _IOSPERFDATA
 DESCRIPTOR.message_types_by_name['PerfData'] = _PERFDATA
@@ -4167,6 +4488,20 @@ DESCRIPTOR.enum_types_by_name['PerfDataType'] = _PERFDATATYPE
 DESCRIPTOR.enum_types_by_name['DataExportFormat'] = _DATAEXPORTFORMAT
 DESCRIPTOR.enum_types_by_name['DataInterchangeFormat'] = _DATAINTERCHANGEFORMAT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+OptionalInt = _reflection.GeneratedProtocolMessageType('OptionalInt', (_message.Message,), {
+  'DESCRIPTOR' : _OPTIONALINT,
+  '__module__' : 'perfdog_pb2'
+  # @@protoc_insertion_point(class_scope:com.perfdog.proto.OptionalInt)
+  })
+_sym_db.RegisterMessage(OptionalInt)
+
+OptionalFloat = _reflection.GeneratedProtocolMessageType('OptionalFloat', (_message.Message,), {
+  'DESCRIPTOR' : _OPTIONALFLOAT,
+  '__module__' : 'perfdog_pb2'
+  # @@protoc_insertion_point(class_scope:com.perfdog.proto.OptionalFloat)
+  })
+_sym_db.RegisterMessage(OptionalFloat)
 
 Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), {
   'DESCRIPTOR' : _EMPTY,
@@ -4470,6 +4805,27 @@ ErrorData = _reflection.GeneratedProtocolMessageType('ErrorData', (_message.Mess
   })
 _sym_db.RegisterMessage(ErrorData)
 
+GpuCounterUtilization = _reflection.GeneratedProtocolMessageType('GpuCounterUtilization', (_message.Message,), {
+  'DESCRIPTOR' : _GPUCOUNTERUTILIZATION,
+  '__module__' : 'perfdog_pb2'
+  # @@protoc_insertion_point(class_scope:com.perfdog.proto.GpuCounterUtilization)
+  })
+_sym_db.RegisterMessage(GpuCounterUtilization)
+
+GpuCounterPixelsInfo = _reflection.GeneratedProtocolMessageType('GpuCounterPixelsInfo', (_message.Message,), {
+  'DESCRIPTOR' : _GPUCOUNTERPIXELSINFO,
+  '__module__' : 'perfdog_pb2'
+  # @@protoc_insertion_point(class_scope:com.perfdog.proto.GpuCounterPixelsInfo)
+  })
+_sym_db.RegisterMessage(GpuCounterPixelsInfo)
+
+GpuCounterMemoryAccess = _reflection.GeneratedProtocolMessageType('GpuCounterMemoryAccess', (_message.Message,), {
+  'DESCRIPTOR' : _GPUCOUNTERMEMORYACCESS,
+  '__module__' : 'perfdog_pb2'
+  # @@protoc_insertion_point(class_scope:com.perfdog.proto.GpuCounterMemoryAccess)
+  })
+_sym_db.RegisterMessage(GpuCounterMemoryAccess)
+
 AndroidPerfData = _reflection.GeneratedProtocolMessageType('AndroidPerfData', (_message.Message,), {
   'DESCRIPTOR' : _ANDROIDPERFDATA,
   '__module__' : 'perfdog_pb2'
@@ -4741,8 +5097,8 @@ _PERFDOGSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=9194,
-  serialized_end=12138,
+  serialized_start=10289,
+  serialized_end=13233,
   methods=[
   _descriptor.MethodDescriptor(
     name='loginWithToken',

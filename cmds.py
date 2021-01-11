@@ -187,7 +187,8 @@ class ShareCase(Command):
     def execute(self):
         case_id = input('请输入caseID：')
         expire_time = int(input('请输入失效时间: '))
-        req = perfdog_pb2.ShareCaseReq(caseId=case_id, expireTime=expire_time)
+        non_password = True if input('是否取消分享密码(y/n):') in 'yY' else False
+        req = perfdog_pb2.ShareCaseReq(caseId=case_id, expireTime=expire_time, nonPassword=non_password)
         print(get_stub().shareCase(req))
 
         return Quit()
