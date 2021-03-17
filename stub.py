@@ -23,7 +23,7 @@ def start_perfdog_service(path):
     t.setDaemon(True)
     t.start()
 
-    time.sleep(3.0)
+    time.sleep(8.0)
 
 
 def init():
