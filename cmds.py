@@ -26,9 +26,9 @@ class MonitorDevice(Command):
                 print('Remove Device:')
                 print(device)
 
-        get_device_manager().set_device_listener(Listener())
+        event_stream = get_device_manager().start_monitor(Listener())
         input('')
-        get_device_manager().set_device_listener(None)
+        get_device_manager().stop_monitor(event_stream)
 
         return Quit()
 
@@ -41,9 +41,7 @@ class PrintDevices(Command):
 
 class DeviceBase(Command):
     def execute(self):
-        get_device_manager().print_devices()
-        idx = int(input('请选择相应的设备：'))
-        device = get_device_manager().get_device(idx)
+        device = get_device_manager().select_device()
         return self.do_execute(device)
 
     def do_execute(self, device):

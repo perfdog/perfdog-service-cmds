@@ -38,7 +38,6 @@ def init():
     s_stub.loginWithToken(perfdog_pb2.Token(token=PERFDOG_SERVICE_TOKEN))
 
     s_device_manager = DeviceManager(s_stub)
-    s_device_manager.start()
 
 
 def de_init():

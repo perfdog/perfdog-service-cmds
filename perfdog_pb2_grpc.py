@@ -18,6 +18,11 @@ class PerfDogServiceStub(object):
                 request_serializer=perfdog__pb2.Token.SerializeToString,
                 response_deserializer=perfdog__pb2.UserInfo.FromString,
                 )
+        self.getDeviceList = channel.unary_unary(
+                '/com.perfdog.proto.PerfDogService/getDeviceList',
+                request_serializer=perfdog__pb2.Empty.SerializeToString,
+                response_deserializer=perfdog__pb2.DeviceListRsp.FromString,
+                )
         self.startDeviceMonitor = channel.unary_stream(
                 '/com.perfdog.proto.PerfDogService/startDeviceMonitor',
                 request_serializer=perfdog__pb2.Empty.SerializeToString,
@@ -185,6 +190,13 @@ class PerfDogServiceServicer(object):
 
     def loginWithToken(self, request, context):
         """通过申请的token登录
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def getDeviceList(self, request, context):
+        """获取在线设备列表
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -423,6 +435,11 @@ def add_PerfDogServiceServicer_to_server(servicer, server):
                     request_deserializer=perfdog__pb2.Token.FromString,
                     response_serializer=perfdog__pb2.UserInfo.SerializeToString,
             ),
+            'getDeviceList': grpc.unary_unary_rpc_method_handler(
+                    servicer.getDeviceList,
+                    request_deserializer=perfdog__pb2.Empty.FromString,
+                    response_serializer=perfdog__pb2.DeviceListRsp.SerializeToString,
+            ),
             'startDeviceMonitor': grpc.unary_stream_rpc_method_handler(
                     servicer.startDeviceMonitor,
                     request_deserializer=perfdog__pb2.Empty.FromString,
@@ -606,6 +623,22 @@ class PerfDogService(object):
         return grpc.experimental.unary_unary(request, target, '/com.perfdog.proto.PerfDogService/loginWithToken',
             perfdog__pb2.Token.SerializeToString,
             perfdog__pb2.UserInfo.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def getDeviceList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/com.perfdog.proto.PerfDogService/getDeviceList',
+            perfdog__pb2.Empty.SerializeToString,
+            perfdog__pb2.DeviceListRsp.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
