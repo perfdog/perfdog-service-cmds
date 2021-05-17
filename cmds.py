@@ -91,6 +91,22 @@ class SetScreenShotInterval(DeviceBase):
         return Quit()
 
 
+class EnableInstallApk(Command):
+    def execute(self):
+        preferences = perfdog_pb2.Preferences(doNotInstallPerfDogApp=False)
+        req = perfdog_pb2.SetPreferencesReq(preferences=preferences)
+        get_stub().setPreferences(req)
+        return Quit()
+
+
+class DisableInstallApk(Command):
+    def execute(self):
+        preferences = perfdog_pb2.Preferences(doNotInstallPerfDogApp=True)
+        req = perfdog_pb2.SetPreferencesReq(preferences=preferences)
+        get_stub().setPreferences(req)
+        return Quit()
+
+
 class SaveTestData(DeviceBase):
     def do_execute(self, device):
         begin_time = int(input('请输入保存数据开始时间点:'))
@@ -432,6 +448,7 @@ class TestContext(Menu):
             UpdateLabel('更新标签', device),
             AddNote('添加标注', device),
             RemoteNote('删除标注', device),
+            GetRenderResolution('获取渲染分辨率（适用Android）', device),
         ])
 
 
@@ -514,6 +531,17 @@ class RemoteNote(Command):
         return Quit()
 
 
+class GetRenderResolution(Command):
+    def __init__(self, desc, device):
+        super(GetRenderResolution, self).__init__(desc)
+        self.device = device
+
+    def execute(self):
+        req = perfdog_pb2.GetRenderResolutionReq(device=self.device)
+        print(get_stub().GetRenderResolutionOfWindowUnderTest(req))
+        return Quit()
+
+
 def get_top_menus():
     return [
         MonitorDevice('监控设备连接断开情况'),
@@ -523,6 +551,8 @@ def get_top_menus():
         SetGlobalDataUploadServer('配置第三方数据存储服务'),
         ClearGlobalDataUploadServer('清除第三方数据存储服务配置'),
         SetScreenShotInterval('配置设备截屏时间间隔'),
+        EnableInstallApk('设置测试安卓设备时安装APK'),
+        DisableInstallApk('设置测试安卓设备时不安装APK'),
         SaveTestData('保存数据'),
         GetDeviceCacheData('单条拉取设备缓存数据(按任意键结束)'),
         GetDeviceCacheDataPacked('批量拉取设备缓存数据(按任意键结束)'),

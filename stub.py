@@ -46,7 +46,6 @@ def de_init():
     global s_device_manager
 
     if s_device_manager is not None:
-        s_device_manager.stop()
         s_device_manager = None
 
     s_stub = None

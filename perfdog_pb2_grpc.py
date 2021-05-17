@@ -178,6 +178,16 @@ class PerfDogServiceStub(object):
                 request_serializer=perfdog__pb2.ShareCaseReq.SerializeToString,
                 response_deserializer=perfdog__pb2.ShareCaseRsp.FromString,
                 )
+        self.setPreferences = channel.unary_unary(
+                '/com.perfdog.proto.PerfDogService/setPreferences',
+                request_serializer=perfdog__pb2.SetPreferencesReq.SerializeToString,
+                response_deserializer=perfdog__pb2.SetPreferencesRsp.FromString,
+                )
+        self.GetRenderResolutionOfWindowUnderTest = channel.unary_unary(
+                '/com.perfdog.proto.PerfDogService/GetRenderResolutionOfWindowUnderTest',
+                request_serializer=perfdog__pb2.GetRenderResolutionReq.SerializeToString,
+                response_deserializer=perfdog__pb2.GetRenderResolutionRet.FromString,
+                )
         self.killServer = channel.unary_unary(
                 '/com.perfdog.proto.PerfDogService/killServer',
                 request_serializer=perfdog__pb2.Empty.SerializeToString,
@@ -420,6 +430,18 @@ class PerfDogServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def setPreferences(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetRenderResolutionOfWindowUnderTest(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def killServer(self, request, context):
         """关闭PerfDogService
         """
@@ -594,6 +616,16 @@ def add_PerfDogServiceServicer_to_server(servicer, server):
                     servicer.shareCase,
                     request_deserializer=perfdog__pb2.ShareCaseReq.FromString,
                     response_serializer=perfdog__pb2.ShareCaseRsp.SerializeToString,
+            ),
+            'setPreferences': grpc.unary_unary_rpc_method_handler(
+                    servicer.setPreferences,
+                    request_deserializer=perfdog__pb2.SetPreferencesReq.FromString,
+                    response_serializer=perfdog__pb2.SetPreferencesRsp.SerializeToString,
+            ),
+            'GetRenderResolutionOfWindowUnderTest': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetRenderResolutionOfWindowUnderTest,
+                    request_deserializer=perfdog__pb2.GetRenderResolutionReq.FromString,
+                    response_serializer=perfdog__pb2.GetRenderResolutionRet.SerializeToString,
             ),
             'killServer': grpc.unary_unary_rpc_method_handler(
                     servicer.killServer,
@@ -1135,6 +1167,38 @@ class PerfDogService(object):
         return grpc.experimental.unary_unary(request, target, '/com.perfdog.proto.PerfDogService/shareCase',
             perfdog__pb2.ShareCaseReq.SerializeToString,
             perfdog__pb2.ShareCaseRsp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def setPreferences(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/com.perfdog.proto.PerfDogService/setPreferences',
+            perfdog__pb2.SetPreferencesReq.SerializeToString,
+            perfdog__pb2.SetPreferencesRsp.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetRenderResolutionOfWindowUnderTest(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/com.perfdog.proto.PerfDogService/GetRenderResolutionOfWindowUnderTest',
+            perfdog__pb2.GetRenderResolutionReq.SerializeToString,
+            perfdog__pb2.GetRenderResolutionRet.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
