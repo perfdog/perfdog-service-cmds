@@ -25,7 +25,7 @@ class Menu(Command):
     def __init__(self, commands, desc=None, quit_desc=None):
         super(Menu, self).__init__(desc)
         if quit_desc is None:
-            quit_desc = '返回上一级菜单'
+            quit_desc = 'Back to previous menu'
         self.commands = [Quit(quit_desc)]
         self.commands.extend(commands)
 
@@ -33,7 +33,7 @@ class Menu(Command):
         for idx, command in enumerate(self.commands):
             print('%s.%s' % (idx, command.get_desc()))
 
-        idx = int(input('请选择要进行的操作：'))
+        idx = int(input('Please select the operation to be performed: '))
         return self.commands[idx]
 
 
