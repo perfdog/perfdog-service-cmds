@@ -63,5 +63,5 @@ class DeviceManager(object):
             print('Devices[%s]:' % index)
             print(device)
             index += 1
-        idx = int(input('请选择相应的设备：'))
+        idx = int(input('Please select the corresponding device:'))
         return res.devices[idx]

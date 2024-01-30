@@ -66,10 +66,10 @@ class InitDevice(DeviceBase):
 
 class SetGlobalDataUploadServer(Command):
     def execute(self):
-        server_url = input('请输入第三方数据上传服务地址：')
+        server_url = input('Please enter the third-party data upload service address:')
         print('0. json')
         print('1. pb')
-        server_format = int(input('请选择要上传的格式：'))
+        server_format = int(input('Please select the format to upload:'))
         req = perfdog_pb2.SetDataUploadServerReq(serverUrl=server_url, dataUploadFormat=server_format)
         get_stub().setGlobalDataUploadServer(req)
 
@@ -86,7 +86,7 @@ class ClearGlobalDataUploadServer(Command):
 
 class SetScreenShotInterval(DeviceBase):
     def do_execute(self, device):
-        seconds = int(input('请输入截屏时间间隔：'))
+        seconds = int(input('Please enter the screenshot interval:'))
         set_screenshot_interval(device, seconds)
         return Quit()
 
@@ -109,15 +109,15 @@ class DisableInstallApk(Command):
 
 class SaveTestData(DeviceBase):
     def do_execute(self, device):
-        begin_time = int(input('请输入保存数据开始时间点:'))
-        end_time = int(input('请输入保存数据结束时间点:'))
-        case_name = input('请输入case名称:')
-        is_upload = True if input('是否上传到云服务(y/n):') in 'yY' else False
-        is_export = True if input('是否保存到本地(y/n):') in 'yY' else False
+        begin_time = int(input('Please enter the start time point for saving data:'))
+        end_time = int(input('Please enter the end time of saving data:'))
+        case_name = input('Please enter case name:')
+        is_upload = True if input('Whether to upload to cloud service (y/n):') in 'yY' else False
+        is_export = True if input('Whether to save locally (y/n):') in 'yY' else False
         print('0. excel')
         print('1. json')
         print('2. pb')
-        output_format = int(input('请选择导出格式：'))
+        output_format = int(input('Please select the export format:'))
         req = perfdog_pb2.SaveDataReq(
             device=device,
             beginTime=begin_time,
@@ -158,7 +158,7 @@ class GetDeviceCacheDataPacked(DeviceBase):
     def do_execute(self, device):
         print('0. json')
         print('1. pb')
-        data_format = int(input('请选择要拉取设备缓存数据格式:'))
+        data_format = int(input('Please select the device cache data format to be pulled:'))
         req = perfdog_pb2.GetDeviceCacheDataPackedReq(device=device, dataFormat=data_format)
         stream = get_stub().getDeviceCacheDataPacked(req)
         t = threading.Thread(target=self.run, args=(stream,))
@@ -180,7 +180,7 @@ class GetDeviceCacheDataPacked(DeviceBase):
 
 class CreateTask(Command):
     def execute(self):
-        task_name = input('请输入任务名:')
+        task_name = input('Please enter the task name:')
         req = perfdog_pb2.CreateTaskReq(taskName=task_name)
         print(get_stub().createTask(req))
 
@@ -189,8 +189,8 @@ class CreateTask(Command):
 
 class ArchiveCaseToTask(Command):
     def execute(self):
-        case_id = input('请输入caseID：')
-        task_id = input('请输入任务ID：')
+        case_id = input('Please enter case ID:')
+        task_id = input('Please enter the task ID:')
         req = perfdog_pb2.ArchiveCaseToTaskReq(caseId=case_id, taskId=task_id)
         get_stub().archiveCaseToTask(req)
 
@@ -199,9 +199,9 @@ class ArchiveCaseToTask(Command):
 
 class ShareCase(Command):
     def execute(self):
-        case_id = input('请输入caseID：')
-        expire_time = int(input('请输入失效时间: '))
-        non_password = True if input('是否取消分享密码(y/n):') in 'yY' else False
+        case_id = input('Please enter case ID:')
+        expire_time = int(input('Please enter expiry time:'))
+        non_password = True if input('Whether to cancel sharing password (y/n):') in 'yY' else False
         req = perfdog_pb2.ShareCaseReq(caseId=case_id, expireTime=expire_time, nonPassword=non_password)
         print(get_stub().shareCase(req))
 
@@ -220,18 +220,18 @@ class KillServer(Command):
 class DeviceContext(Menu):
     def __init__(self, device):
         super(DeviceContext, self).__init__([
-            GetDeviceInfo('获取设备信息', device),
-            GetDeviceAppList('获取App列表', device),
-            GetDeviceAppProcessList('获取App进程列表', device),
-            GetDeviceAppWindowsMap('获取App进程对应的Activity和SurfaceView', device),
-            GetDeviceSysProcessList('获取系统进程列表', device),
-            UpdateAppInfo('更新App信息', device),
-            GetDeviceSupportTypes('获取设备支持的测试类型', device),
-            GetDeviceTypes('获取设备当前打开的测试类型', device),
-            EnableDeviceType('启用设备测试类型', device),
-            DisableDeviceType('禁用设备测试类型', device),
-            StartTest('开始测试', device),
-            StopTest('结束测试', device),
+            GetDeviceInfo('Get device information', device),
+            GetDeviceAppList('Get App list', device),
+            GetDeviceAppProcessList('Get App process list', device),
+            GetDeviceAppWindowsMap('Get the Activity and SurfaceView corresponding to the App process', device),
+            GetDeviceSysProcessList('Get system process list', device),
+            UpdateAppInfo('Update App information', device),
+            GetDeviceSupportTypes('Get the test types supported by the device', device),
+            GetDeviceTypes('Get the test type currently opened by the device', device),
+            EnableDeviceType('Enable device test type', device),
+            DisableDeviceType('Disable device test type', device),
+            StartTest('Start testing', device),
+            StopTest('End test', device),
         ])
 
 
@@ -264,7 +264,7 @@ class GetDeviceAppProcessList(Command):
     def execute(self):
         apps = get_apps(self.device)
         print_apps(apps)
-        idx = int(input('请选择要获取进程列表的App：'))
+        idx = int(input('Please select the App you want to get the process list:'))
         process_list = get_app_process_list(self.device, apps[idx])
         print_app_process_list(process_list)
         return Quit()
@@ -278,7 +278,7 @@ class GetDeviceAppWindowsMap(Command):
     def execute(self):
         apps = get_apps(self.device)
         print_apps(apps)
-        idx = int(input('请选择要获取信息的App：'))
+        idx = int(input('Please select the App you want to obtain information from:'))
         pid_windows_map = get_app_pid_windows_map(self.device, apps[idx])
         print_app_pid_windows_map(pid_windows_map)
         return Quit()
@@ -303,7 +303,7 @@ class UpdateAppInfo(Command):
     def execute(self):
         apps = get_apps(self.device)
         print_apps(apps)
-        idx = int(input('请选择要测试的App：'))
+        idx = int(input('Please select the App you want to test:'))
         app = apps[idx]
         req = perfdog_pb2.UpdateAppInfoReq(device=self.device, app=app)
         print(get_stub().updateAppInfo(req))
@@ -341,7 +341,7 @@ class EnableDeviceType(Command):
     def execute(self):
         types = get_device_support_types(self.device)
         print_device_types(types)
-        idx = int(input('请选择要启用的类型：'))
+        idx = int(input('Please select the type to enable:'))
         enable_device_type(self.device, types[idx])
         return Quit()
 
@@ -354,7 +354,7 @@ class DisableDeviceType(Command):
     def execute(self):
         types = get_device_support_types(self.device)
         print_device_types(types)
-        idx = int(input('请选择要关闭的类型：'))
+        idx = int(input('Please select the type of disable:'))
         disable_device_type(self.device, types[idx])
         return Quit()
 
@@ -370,7 +370,7 @@ class StartTest(Command):
             return True, TestContext(self.device)
 
         self.print_usage()
-        idx = int(input('选择要测试的类型：'))
+        idx = int(input('Choose the type to test:'))
 
         if idx == 0:
             self.test_app()
@@ -392,27 +392,27 @@ class StartTest(Command):
     def test_app(self):
         apps = get_apps(self.device)
         print_apps(apps)
-        idx = int(input('请选择要测试的App：'))
+        idx = int(input('Please select the App you want to test:'))
         app = apps[idx]
         start_app_test(self.device, app)
 
     def test_app_process(self):
         apps = get_apps(self.device)
         print_apps(apps)
-        idx = int(input('请选择要测试的App：'))
+        idx = int(input('Please select the App you want to test:'))
         app = apps[idx]
 
         process_list = get_app_process_list(self.device, app)
         print_app_process_list(process_list)
-        idx = int(input('请选择要测试App进程：'))
+        idx = int(input('Please select the App process to test:'))
         process = process_list[idx]
 
-        is_hide_float_window = True if input('是否隐藏浮窗(y/n):') in 'yY' else False
-        is_test_sub_window = True if input('是否测试子窗口(y/n):') in 'yY' else False
+        is_hide_float_window = True if input('Whether to hide the floating window (y/n):') in 'yY' else False
+        is_test_sub_window = True if input('Whether to test the sub-window (y/n):') in 'yY' else False
         if is_test_sub_window:
             sub_list = get_app_pid_windows_map(self.device, app)
             print_app_pid_windows_map(sub_list)
-            sub_window = input('请输入要获取的子窗口名字：')
+            sub_window = input('Please enter the name of the subwindow you want to get:')
         else:
             sub_window = None
 
@@ -421,9 +421,9 @@ class StartTest(Command):
     def test_sys_process(self):
         process_list = get_sys_process_list(self.device)
         print_sys_process_list(process_list)
-        idx = int(input('请选择要测试系统进程：'))
+        idx = int(input('Please select a system process to test:'))
         process = process_list[idx]
-        is_hide_float_window = True if input('是否隐藏浮窗(y/n):') in 'yY' else False
+        is_hide_float_window = True if input('Whether to hide the floating window (y/n):') in 'yY' else False
 
         start_sys_process_test(self.device, process, is_hide_float_window)
 
@@ -443,12 +443,12 @@ class StopTest(Command):
 class TestContext(Menu):
     def __init__(self, device):
         super(TestContext, self).__init__([
-            OpenPerfDataStream('获取当前测试设备的实时测试数据流(按任意键结束)', device),
-            SetLabel('设置标签', device),
-            UpdateLabel('更新标签', device),
-            AddNote('添加标注', device),
-            RemoteNote('删除标注', device),
-            GetRenderResolution('获取渲染分辨率（适用Android）', device),
+            OpenPerfDataStream('Get the real-time test data stream of the current test device (press any key to end)', device),
+            SetLabel('Set label', device),
+            UpdateLabel('Update label', device),
+            AddNote('Add tag', device),
+            RemoteNote('Delete tag', device),
+            GetRenderResolution('Get rendering resolution (for Android)', device),
         ])
 
 
@@ -483,7 +483,7 @@ class SetLabel(Command):
         self.device = device
 
     def execute(self):
-        label_name = input('请输入标签名字：')
+        label_name = input('Please enter the label name:')
         req = perfdog_pb2.SetLabelReq(device=self.device, label=label_name)
         print(get_stub().setLabel(req))
 
@@ -496,8 +496,8 @@ class UpdateLabel(Command):
         self.device = device
 
     def execute(self):
-        label_time = int(input('请输入标签时间戳：'))
-        label_name = input('请输入标签名字：')
+        label_time = int(input('Please enter label timestamp:'))
+        label_name = input('Please enter the label name:')
         req = perfdog_pb2.UpdateLabelReq(device=self.device, time=label_time, label=label_name)
         get_stub().updateLabel(req)
 
@@ -510,8 +510,8 @@ class AddNote(Command):
         self.device = device
 
     def execute(self):
-        note_time = int(input('请输入标注时间戳：'))
-        note_name = input('请输入标注名字：')
+        note_time = int(input('Please enter tag timestamp:'))
+        note_name = input('Please enter the tag name:')
         req = perfdog_pb2.AddNoteReq(device=self.device, time=note_time, note=note_name)
         get_stub().addNote(req)
 
@@ -524,7 +524,7 @@ class RemoteNote(Command):
         self.device = device
 
     def execute(self):
-        note_time = int(input('请输入标注时间戳：'))
+        note_time = int(input('Please enter tag timestamp:'))
         req = perfdog_pb2.RemoveNoteReq(device=self.device, time=note_time)
         get_stub().removeNote(req)
 
@@ -544,20 +544,20 @@ class GetRenderResolution(Command):
 
 def get_top_menus():
     return [
-        MonitorDevice('监控设备连接断开情况'),
-        PrintDevices('打印当前连接所有设备'),
-        GetDeviceStatus('获取设备状态'),
-        InitDevice('初始化设备'),
-        SetGlobalDataUploadServer('配置第三方数据存储服务'),
-        ClearGlobalDataUploadServer('清除第三方数据存储服务配置'),
-        SetScreenShotInterval('配置设备截屏时间间隔'),
-        EnableInstallApk('设置测试安卓设备时安装APK'),
-        DisableInstallApk('设置测试安卓设备时不安装APK'),
-        SaveTestData('保存数据'),
-        GetDeviceCacheData('单条拉取设备缓存数据(按任意键结束)'),
-        GetDeviceCacheDataPacked('批量拉取设备缓存数据(按任意键结束)'),
-        CreateTask('创建任务'),
-        ArchiveCaseToTask('归档Case到任务'),
-        ShareCase('分享Case'),
-        KillServer('killServer'),
+        MonitorDevice('Monitor device disconnections'),
+        PrintDevices('Print all currently connected devices'),
+        GetDeviceStatus('Get device status'),
+        InitDevice('Initialize device'),
+        SetGlobalDataUploadServer('Configure third-party data storage services'),
+        ClearGlobalDataUploadServer('Clear third-party data storage service configuration'),
+        SetScreenShotInterval('Configure device screenshot interval'),
+        EnableInstallApk('Installing the APK when setting up a test Android device'),
+        DisableInstallApk('Setting up a test Android device without installing the APK'),
+        SaveTestData('Save data'),
+        GetDeviceCacheData('Single pull device cache data (press any key to end)'),
+        GetDeviceCacheDataPacked('Pull device cache data in batches (press any key to end)'),
+        CreateTask('Create tasks'),
+        ArchiveCaseToTask('Archive Case to task'),
+        ShareCase('Share Case'),
+        KillServer('Kill Server'),
     ]

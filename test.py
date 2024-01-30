@@ -7,7 +7,7 @@ from cmds import get_top_menus
 
 
 def run():
-    Stack(Menu(get_top_menus(), quit_desc='退出')).run()
+    Stack(Menu(get_top_menus(), quit_desc='quit')).run()
 
 
 def main():
