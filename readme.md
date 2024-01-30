@@ -1,4 +1,6 @@
-1. 安装python 3.x版本，一般使用最新版就好
-2. 安装grpcio(1.23.0), 安装protobuf(3.10.0)，推荐使用pip安装
-3. 执行: python test.py
+- [English](readme.md)
+- [中文](readme_zh.md)
 
+1. Install python 3.x version. Generally, just use the latest version.
+2. Install grpcio(1.23.0), install protobuf(3.10.0), it is recommended to use pip to install
+3. Execute: python test.py
